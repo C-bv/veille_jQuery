@@ -1,0 +1,150 @@
+@import url("https://use.fontawesome.com/releases/v5.15.4/css/all.css");
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    line-height: 1.5;
+}
+
+aside {
+    width: 270px;
+    background-color: #fff;
+    position: fixed;
+    height: 100%;
+    left: -270px;
+    top: 0;
+    z-index: 11;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+aside.open{
+    left: 0px;
+}
+
+aside .nav_toggler {
+    display: flex;
+    height: 40px;
+    width: 45px;
+    border: 1px solid #e8dfec;
+    cursor: pointer;
+    position: fixed;
+    left: 30px;
+    top: 20px;
+    z-index: 11;
+    border-radius: 5px;
+    background-color: #fff;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    color: #2e64b3;
+}
+
+aside .nav_toggler.open {
+    left: 300px;
+}
+
+aside .aside_inner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+aside .aside_inner img{
+    width: 100%;
+}
+
+
+aside .nav {
+    list-style: none;
+    margin: 80px 0;
+    padding: 0;
+}
+
+aside .nav li {
+    display: block;
+}
+
+aside .nav li a {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2e64b3;
+    text-decoration: none;
+    line-height: 45px;
+    display: block;
+    border-bottom: 1px solid #e8dfec;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    text-transform: capitalize;
+}
+
+aside .nav li a:not(.active):hover{
+	padding-left: 5px;
+}
+
+
+
+
+/* SECTION */
+
+section {
+    background-color: #8f4040;
+    min-height: 100vh;
+    padding: 70px 30px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    position: fixed;
+}
+
+section.open {
+    left: 270px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.page_switcher {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+    background: #fff;
+    right: 30px;
+    bottom: 20px;
+    border: 1px solid #e8dfec;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    color: #2e64b3;
+}
