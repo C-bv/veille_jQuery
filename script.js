@@ -5,15 +5,18 @@ $(document).ready(function(){
       setTimeout(function(){
             $(".loader").css("opacity","0");
             $(".start").css("opacity","1");
-      },9000);
+      },900); //9000
    });
 
 // Hide preloader + page_switcher_up
 $(".start").click(function(){
-      $(".preloader").hide();
+      $(".preloader").fadeTo("fast", 0, function(){
+            setTimeout(function(){
+                  $(".preloader").hide();
+            },1000);
+      });
       hideShowPageSwitcher();
 });
-
 
 // Open/close aside + nav_toogler = section
 $(".nav_toggler").click(function(){
@@ -39,21 +42,51 @@ const hideShowPageSwitcher = function(){
       }
 }
 
-
 // Switch to previous section
 $(".page_switcher_up").click( function(){
-      $("section.active").prev().toggleClass("active");
-      $("section.active").next().removeClass("active");
+      $("section.active").prev().toggleClass("active").removeClass("back").fadeIn();
+      $("section.active").next().removeClass("active").toggleClass("back").fadeOut();
       hideShowPageSwitcher();
 });
 
 
 // Switch to next section
 $(".page_switcher_down").click( function(){
-      $("section.active").next().toggleClass("active");
-      $("section.active").prev().removeClass("active");
+      $("section.active").next().toggleClass("active").removeClass("back").fadeIn();
+      $("section.active").prev().removeClass("active").toggleClass("back").fadeOut();
       hideShowPageSwitcher();
 });
+
+// let sectionNumber = 
+// function(){
+
+// }
+// if a[i] clicked the apply fn prev net to section[i]
+
+$( "a" ).click(function() {
+      // `this` is the DOM element that was clicked
+      var index = $( "a" ).index( this );
+      $("section").index(2).fadeIn();
+      console.log("That was div index #" + index );
+
+    });
+
+
+
+// CODE BELOW DOESN'T WORK FOR SECTION:LAST.PREV AND SECTION:FIRST.NEXT
+
+      // $(".page_switcher_up").click( function(){
+      //       $("section.active").prev().toggleClass("active").removeClass("back");
+      //       $("section.active").next().removeClass("active").toggleClass("back");
+      //       hideShowPageSwitcher();
+      // });
+
+      // $(".page_switcher_down").click( function(){
+      //       $("section.active").next().toggleClass("active").removeClass("back");
+      //       $("section.active").prev().removeClass("active").toggleClass("back");
+      //       hideShowPageSwitcher();
+      // });
+
 
 // SECTION SWITCHER END
 

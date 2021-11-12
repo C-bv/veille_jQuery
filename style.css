@@ -138,6 +138,7 @@ body {
 aside {
     width: 270px;
     background-color: #fff;
+    border-right: 1px solid #e8dfec;
     position: fixed;
     height: 100%;
     left: -270px;
@@ -267,7 +268,7 @@ aside .nav li a:not(.active):hover{
 /* SECTION */
 
 section {
-    background-color: #868080;
+    background-color: #ffffff;
     min-height: 100vh;
     padding: 70px 30px;
     left: 0;
@@ -289,18 +290,18 @@ section.open {
 section.active{
     opacity: 1;
     z-index: 2;
-    -webkit-animation: slideSection 2s ease;
-    animation: slideSection 2s ease;
+    /* -webkit-animation: slideSection 2s ease;
+    animation: slideSection 2s ease; */
 }
 
 section.back{
     opacity: 1;
     z-index: 1;
-    -webkit-animation: slideSection 2s ease;
-    animation: slideSection 2s ease;
+    /* -webkit-animation: slideSection 2s ease;
+    animation: slideSection 2s ease; */
 }
 
-@-webkit-keyframes slideSection{
+/* @-webkit-keyframes slideSection{
 	0%{
 		-webkit-transform: translateY(100%);
 		transform: translateY(100%);
@@ -319,7 +320,7 @@ section.back{
 	   -webkit-transform: translateY(0%);
 		transform: translateY(0%);	
 	}
-}
+} */
 
 /* SECTION END */
 
