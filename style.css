@@ -1,5 +1,6 @@
 @import url("https://use.fontawesome.com/releases/v5.15.4/css/all.css");
 
+/* GENERAL */
 
 * {
     box-sizing: border-box;
@@ -9,6 +10,130 @@ body {
     margin: 0;
     line-height: 1.5;
 }
+
+/* GENERAL END */
+
+
+/* PRELOADER */
+
+.preloader{
+	background-color: #fff;
+	position: fixed;
+	left:0;
+	top:0;
+	height: 100%;
+	width: 100%;
+	z-index: 150;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    flex-direction: column;
+    transition: all 1s ease;
+	-webkit-transition: all 1s ease;
+}
+
+.preloader img{
+    -webkit-animation: fadein 10s linear ;
+	animation: fadein 10s linear ;
+}
+
+@-webkit-keyframes fadein {
+    0%{ 
+        -webkit-opacity: 0; 
+        opacity: 0;
+    }
+    100%{
+        -webkit-opacity: 1;
+        opacity: 1; 
+    }
+}
+
+@keyframes fadein {
+    0%{ 
+        -webkit-opacity: 0; 
+        opacity: 0;
+    }
+    100%{
+        -webkit-opacity: 1;
+        opacity: 1; 
+    }
+}
+
+.preloader .loader{
+    opacity: 1;
+    width: 200px;
+    margin: 25px;
+    position: relative;
+    -webkit-transition: all 2s ease;
+    transition: all 2s ease;
+}
+
+.loader .loading_1 {
+    position: relative;
+    width: 100%;
+    height: 15px;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+
+.loader .loading_1:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #2e64b3;
+    animation: load 10s linear ;
+}
+
+@keyframes load {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.start{
+    margin: 25px;
+    display: flex;
+    height: 50px;
+    width: 50px;
+    border: 1px solid #000;
+    border-radius: 500px;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    -webkit-transition: all 3s ease;
+    transition: all 3s ease;
+    -webkit-animation: bounce 0.5s ease infinite alternate;
+	animation: bounce 0.5s ease infinite alternate;
+}
+
+@keyframes bounce {
+  
+    0%
+    {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-20px);
+    }
+}
+
+.start i{
+    font-size: 1.3em;
+    color: #2e64b3;
+}
+
+/* PRELOADER END */
+
+
+/* ASIDE */
 
 aside {
     width: 270px;
@@ -91,11 +216,58 @@ aside .nav li a:not(.active):hover{
 	padding-left: 5px;
 }
 
+/* ASIDE END */
+
+
+/* PAGE SWITCHER */
+
+.page_switcher_up {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+    background: #fff;
+    right: 30px;
+    bottom: 70px;
+    border: 1px solid #e8dfec;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    color: #2e64b3;
+    z-index: 11;
+}
+
+.page_switcher_down {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    width: 45px;
+    background: #fff;
+    right: 30px;
+    bottom: 20px;
+    border: 1px solid #e8dfec;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    color: #2e64b3;
+    z-index: 11;
+}
+
+/* PAGE SWITCHER END*/
+
 
 /* SECTION */
 
 section {
-    background-color: #8f4040;
+    background-color: #868080;
     min-height: 100vh;
     padding: 70px 30px;
     left: 0;
@@ -149,49 +321,11 @@ section.back{
 	}
 }
 
+/* SECTION END */
 
 
 
 
 
-.page_switcher_up {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 45px;
-    width: 45px;
-    background: #fff;
-    right: 30px;
-    bottom: 70px;
-    border: 1px solid #e8dfec;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 5px;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    color: #2e64b3;
-    z-index: 11;
-}
-
-.page_switcher_down {
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 45px;
-    width: 45px;
-    background: #fff;
-    right: 30px;
-    bottom: 20px;
-    border: 1px solid #e8dfec;
-    text-align: center;
-    cursor: pointer;
-    border-radius: 5px;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    color: #2e64b3;
-    z-index: 11;
-}
 
 
