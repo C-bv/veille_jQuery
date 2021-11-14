@@ -108,3 +108,24 @@ $(navLinks).click(function(){
 
 // SECTION SWITCHER END
 
+
+
+// DEMO
+
+// Introduction demo
+let liste = $(".demo > ol > li");
+let firstCommand = $(".first_command");
+
+$(firstCommand).click(function(){
+      $(liste).css("color", "red");
+});
+
+// document.getElementsByTagName(li).style.color = "red";
+let listeO = $(".demo > ol");
+let secondCommand = $(".second_command");
+$(secondCommand).click(function(){
+      let ddo = document.body.listO.getElementsByTagName("li");
+      ddo[0].style.color = "red";
+      console.log(ddo[0]);
+      
+});

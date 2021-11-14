@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.js"
-        integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script> -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
     <title>Veille jQuery</title>
 
 </head>
@@ -31,10 +32,13 @@
             <div class="aside_inner">
                 <img src="img/logo.svg" alt="Logo jQuery">
                 <ul class="nav">
-                    <li><a href="#" class="active"><i class="f fa-home"></i> Home</a></li>
-                    <li><a href="#"><i class="f fa-user"></i> Introduction</a></li>
-                    <li><a href="#"><i class="f fa-briefcase"></i> Histoire</a></li>
-                    <li><a href="#"><i class="f fa-comments"></i> Démo</a></li>
+                    <li><a href="#" class="active"> Home</a></li>
+                    <li><a href="#">Introduction</a></li>
+                    <li><a href="#">Prérequis</a></li>
+                    <li><a href="#">Fonctionnement</a></li>
+                    <li><a href="#">Todo</a></li>
+                    <li><a href="#">Todo</a></li>
+                    <li><a href="#">Todo</a></li>
                 </ul>
             </div>
             </div>
@@ -42,29 +46,138 @@
         <div class="main_content">
             <section class="home_section active">
                 <h2>Home</h2>
-                <p>1</p>
+                <div id="home_logo_container">
+                    <img src="img/logo.svg" alt="Logo jQuery">
+                </div>
+                <div id="home_container">
+                    <div id="mini_home_container">
+                        <h3>Welcome !</h3>
+                        <div id="welcome_container">
+                            <p>Ce site web a pour but de vous faire découvrir jQuery !<br>
+                                Vous y trouverez le contenu de ma veille, ainsi que quelques liens pour aller plus loin.
+                                L'intégralité des animations de ce site ont étés codés en utlisant jQuery, n'hésitez pas à jeter un coup d'oeil !<br>
+                                Charles - DWWM 2021
+                            </p>
+                        </div>
+                    </div>
+                    <div id="mini_home_container">
+                        <h3>Liens utiles</h3>
+                        <div id="links_container">
+                            <a href="https://jquery.com/" target="_blank">jQuery.com</a>
+                            <a href="https://code.jquery.com/" target="_blank">jQuery CDN / DOWNLOADS</a>
+                            <a href="https://learn.jquery.com/" target="_blank">Learn jQuery</a>
+                            <a href="https://play.kahoot.it/v2/?quizId=e9124abf-34ab-4e75-abdd-ca6b06bcb9bf" target="_blank">Kahoot</a>
+                        </div>
+                    </div>
+                </div>
             </section>
             <section class="introduction_section">
                 <h2>Introduction</h2>
-                <p>2</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam dicta sed ut quisquam? Ipsam placeat labore aspernatur debitis harum atque aperiam culpa temporibus consequatur, natus suscipit quia quisquam. Porro, ullam!
-                Obcaecati cupiditate maiores voluptas excepturi culpa? Maxime ipsa alias assumenda fugiat. Consequatur facere id, obcaecati sunt, a explicabo dolores cumque nam eveniet rerum beatae saepe? Ipsa neque asperiores in dignissimos!
-                Facilis doloremque eos aperiam voluptates et ad in obcaecati, nostrum delectus ea at adipisci animi optio asperiores dolore inventore ab minus. Sequi voluptatem ex laudantium! Magnam quidem repellendus esse excepturi?
-                Iste laboriosam corporis, soluta labore quis odit facilis placeat necessitatibus repellendus minima, nisi perspiciatis veritatis. Sint, ratione saepe provident eius incidunt quidem dignissimos deleniti aperiam fugiat, quam molestias beatae! Odit?
-                Doloremque facere libero nisi labore animi repellat cum itaque. Minus, temporibus similique libero voluptates, numquam recusandae repellendus illum tenetur maiores exercitationem minima possimus, delectus nesciunt laborum eveniet pariatur ut doloremque?
-                Quo voluptatem dolor iusto beatae omnis unde laboriosam autem itaque id molestias, magnam, animi eius magni culpa in rerum nam, quasi impedit aliquid a iste repellat! Nemo, reprehenderit laborum. Cum!
-                Velit inventore cum fuga expedita! Sint veritatis officiis obcaecati ut nulla temporibus? Quod laudantium sit quo harum commodi odio quam, eveniet eaque fugiat quasi voluptatum aut excepturi id distinctio ea?
-                Quidem consequatur architecto ad quis fuga, veniam temporibus quae libero aperiam eos autem! Maiores repellendus rerum unde explicabo placeat aperiam tenetur asperiores, ea cupiditate mollitia eaque et officiis in culpa!
-                Impedit ducimus sunt, maiores vel voluptatibus omnis quas inventore illum illo nisi expedita quisquam veniam cum laborum voluptates natus voluptas labore? Esse magni distinctio quasi odit optio qui corporis quas!
-                Mollitia consequatur voluptate neque incidunt, a enim distinctio ipsa dicta in nesciunt eius, debitis voluptatem? Amet eum iste cum expedita sit quae error similique nobis. Odio aspernatur doloremque voluptates neque!</p>
+                <div id="slide_container">
+                    <div id="mini_slide_container">
+                        <h3>Qu'est-ce que jQuery ?</h3>
+                        <div id="welcome_container">
+                            <p>jQuery est une bibliothèque JavaScript libre et multiplateforme créée par John Resig en 2006, qui a pour but de pour faciliter l'écriture de scripts côté client dans le code HTML des pages web.
+                                Le but de la bibliothèque étant le parcours et la modification du DOM ,elle contient de nombreuses fonctionnalités ; notamment des animations, la manipulation des feuilles de style en cascade (accessibilité des classes et attributs), la gestion des évènements, etc.
+                                jQuery est à l'heure actuelle la bibliothèque front-end la plus utilisée au monde (plus de la moitié des sites Web intègrent jQuery).
+                            </p>
+                        </div>
+                    </div>
+                    <div id="mini_slide_container">
+                        <h3>A quoi ça sert ?</h3>
+                        <div id="welcome_container">
+                            <p>Le rôle de jQuery est de simplifier l’utilisation de Javascript en fournissant un ensemble de codes déjà prêts à l’emploi.
+                                En effet, pour une action similaire, un script écrit en jQuery est bien plus simple qu'en JavaScript.
+                                En l’occurrence, la librairie jQuery consiste en un ensemble de blocs de codes JavaScripts préconçus et qui vont être généralement enfermés dans des méthodes. 
+                                Il va donc nous suffire d’appeler ces méthodes pour exécuter le code qu’elles contiennent.
+                                Utiliser jQuery va donc pouvoir être très avantageux pour nous à deux niveaux différents : on va d’une part gagner beaucoup de temps de développement en utilisant les outils mis à notre disposition par cette librairie et d’autre part être assuré de la validité de notre code.
+                            </p>
+                        </div>
+                        <div class="demo_container">
+                            <button class ="reset_demo">Reset</button>
+                            <div class="demo">
+                                <ol>
+                                    <li>First</li>
+                                    <li>Second</li>
+                                    <li>Thrid</li>
+                                    <li>Fourth</li>
+                                </ol>
+                                <div class="commands">
+                                    <div class="first_command">
+                                        document.getElementsByTagName(li).style.color = "red";
+                                    </div>
+                                    <div class="second_command">
+                                        $(li).css("color, red")
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="mini_slide_container">
+                        <h3>Javascript dans tout ça ?</h3>
+                        <div id="welcome_container">
+                            <p>jQuery ne doit pas être vu comme une alternative au JavaScript mais plutôt comme un ajout : nous allons utiliser jQuery au côté du JavaScript classique dans nos scripts.
+                                Par ailleurs, jQuery ne dispense pas et ne doit pas remplacer l’apprentissage du JavaScript ni être vu comme un « raccourci » pour apprendre le JavaScript.
+                                Au contraire : pour tirer avantage de jQuery, il est fortement recommandé d’avoir déjà une bonne connaissance et une bonne maîtrise du langage JavaScript et de son fonctionnement général.
+                                De même, jQuery n’est pas non plus une solution miracle qui va faire tout le travail à votre place. Cette bibliothèque est très bien faite et c’est un outil très puissant, mais il vous faudra tout de même vous impliquer et réfléchir afin de créer des scripts performants et bien construits.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </section>
-            <section class="histoire_section">
-                <h2>Histoire</h2>
-                <p>3</p>
+            <section class="prérequis_section">
+                <h2>Prérequis</h2>
+                <div id="slide_container">
+                    <div id="mini_slide_container">
+                        <h3>Télécharger et inclure jQuery</h3>
+                        <div id="welcome_container">
+                            <p>Pour pouvoir utiliser ces codes, il va falloir les inclure dans nos pages.
+                                deux types de fichiers: des fichiers compressés et des fichiers non compressés.
+                                La copie de jQuery compressée ne contient aucun espace entre les codes. Le but est de réduire le poids total de la librairie afin d’améliorer les performances de votre site. C’est la version que nous placerons généralement sur notre site « live » (en production).
+                                Cependant, pour travailler, je vous conseille plutôt la version non compressée, qui est une version lisible de la librairie (avec notamment des commentaires, une bonne indentation, etc.).
+                                Cela vous permettra d’étudier plus facilement, si vous le souhaitez, les scripts composant la librairie jQuery.
+                            </p>
+                        </div>
+                    </div>
+                    <div id="mini_slide_container">
+                        <h3>Inclure jQuery via un CDN</h3>
+                        <div id="welcome_container">
+                            <p>Une autre façon d’utiliser jQuery est de l’inclure depuis un CDN plutôt que de télécharger et d’héberger les fichiers jQuery nous-mêmes.
+                                Un CDN (Content Delivery Network ou réseau de distribution de contenu) correspond à un ensemble de serveurs reliés et formant donc un réseau et dont le but est de fournir un accès à du contenu très rapidement.
+                                Utiliser un CDN plutôt que de télécharger et d’héberger soi-même ses fichiers possèdent deux avantages notables : ne pas avoir à stocker les fichiers bien sûr mais également optimiser les performances de votre site.
+                                En effet, lorsqu’un visiteur cherche à accéder à une page de notre site, son navigateur va télécharger les ressources nécessaires à l’affichage de la page. Plus une page va avoir besoin de ressources pour fonctionner, plus son affichage va être lent.
+                                Dans le cas où on inclut jQuery via un CDN, les fichiers jQuery proviennent d’une URL commune (qui est celle du CDN) qui est potentiellement utilisée par de nombreux autres sites.
+                                Si un visiteur a visité par le passé un autre site utilisant le même CDN pour inclure le même fichier, il est alors probable que le fichier soit toujours en cache dans son navigateur et qu’il n’ait donc pas à le télécharger à nouveau, ce qui va faire que notre page va s’afficher plus vite.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </section>
-            <section class="demo_section">
-                <h2>Démonstration</h2>
-                <p>4</p>
+            <section class="fonctionnement_section">
+                <h2>Fonctionnement</h2>
+                <div id="slide_container">
+                    <div id="mini_slide_container">
+                        <h3>La syntaxe</h3>
+                        <div id="welcome_container">
+                            <p>Afin de pouvoir accéder aux différentes propriétés et méthodes de la librairie, on utilise les alias jQuery() ou $().
+                                Font exactement la même chose, sélectionner nos éléments HTML.
+                                pour sélectionner un élément HTML en jQuery, il va nous suffire de mentionner le sélecteur CSS associé à cet élément dans notre méthode $() (ou dans la méthode jquery()).
+                            </p>
+                        </div>
+                    </div>
+                    <div id="mini_slide_container">
+                        <h3>Inclure jQuery via un CDN</h3>
+                        <div id="welcome_container">
+                            <p>Une autre façon d’utiliser jQuery est de l’inclure depuis un CDN plutôt que de télécharger et d’héberger les fichiers jQuery nous-mêmes.
+                                Un CDN (Content Delivery Network ou réseau de distribution de contenu) correspond à un ensemble de serveurs reliés et formant donc un réseau et dont le but est de fournir un accès à du contenu très rapidement.
+                                Utiliser un CDN plutôt que de télécharger et d’héberger soi-même ses fichiers possèdent deux avantages notables : ne pas avoir à stocker les fichiers bien sûr mais également optimiser les performances de votre site.
+                                En effet, lorsqu’un visiteur cherche à accéder à une page de notre site, son navigateur va télécharger les ressources nécessaires à l’affichage de la page. Plus une page va avoir besoin de ressources pour fonctionner, plus son affichage va être lent.
+                                Dans le cas où on inclut jQuery via un CDN, les fichiers jQuery proviennent d’une URL commune (qui est celle du CDN) qui est potentiellement utilisée par de nombreux autres sites.
+                                Si un visiteur a visité par le passé un autre site utilisant le même CDN pour inclure le même fichier, il est alors probable que le fichier soit toujours en cache dans son navigateur et qu’il n’ait donc pas à le télécharger à nouveau, ce qui va faire que notre page va s’afficher plus vite.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
     </main>
