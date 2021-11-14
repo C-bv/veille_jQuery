@@ -9,6 +9,7 @@
 body {
     margin: 0;
     line-height: 1.5;
+    overflow-y: hidden;
 }
 
 /* GENERAL END */
@@ -215,6 +216,12 @@ aside .nav li a {
 
 aside .nav li a:not(.active):hover{
 	padding-left: 5px;
+    color: red;
+}
+
+aside .nav li a.active{
+	padding-left: 5px;
+    color: red;
 }
 
 /* ASIDE END */
@@ -268,8 +275,9 @@ aside .nav li a:not(.active):hover{
 /* SECTION */
 
 section {
+    position: fixed;
     background-color: #ffffff;
-    min-height: 100vh;
+    height: 100vh;
     padding: 70px 30px;
     left: 0;
     top: 0;
@@ -279,8 +287,6 @@ section {
     overflow-y: auto;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    position: fixed;
-    z-index: 0;
 }
 
 section.open {
@@ -288,39 +294,46 @@ section.open {
 }
 
 section.active{
-    opacity: 1;
     z-index: 2;
-    /* -webkit-animation: slideSection 2s ease;
-    animation: slideSection 2s ease; */
 }
 
-section.back{
-    opacity: 1;
-    z-index: 1;
-    /* -webkit-animation: slideSection 2s ease;
-    animation: slideSection 2s ease; */
-}
+/* TESTED AND ABANDONNED */
 
-/* @-webkit-keyframes slideSection{
-	0%{
-		-webkit-transform: translateY(100%);
-		transform: translateY(100%);
-	}
-	100%{
-	   -webkit-transform: translateY(0%);
-		transform: translateY(0%);	
-	}
-}
-@keyframes slideSection{
-	0%{
-		-webkit-transform: translateY(100%);
-		transform: translateY(100%);
-	}
-	100%{
-	   -webkit-transform: translateY(0%);
-		transform: translateY(0%);	
-	}
-} */
+    /* section.active{
+        opacity: 1;
+        z-index: 2;
+        -webkit-animation: slideSection 2s ease;
+        animation: slideSection 2s ease;
+    }
+
+    section.back{
+        opacity: 1;
+        z-index: 1;
+        -webkit-animation: slideSection 2s ease;
+        animation: slideSection 2s ease;
+    }
+
+    @-webkit-keyframes slideSection{
+        0%{
+            -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+        }
+        100%{
+        -webkit-transform: translateY(0%);
+            transform: translateY(0%);	
+        }
+    }
+    @keyframes slideSection{
+        0%{
+            -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+        }
+        100%{
+        -webkit-transform: translateY(0%);
+            transform: translateY(0%);	
+        }
+    } */
+/* TESTED AND ABANDONNED END*/
 
 /* SECTION END */
 
