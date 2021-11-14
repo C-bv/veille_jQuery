@@ -287,15 +287,17 @@ section {
     overflow-y: auto;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
+    display: none;
+}
+
+section:first-of-type {
+    display: block;
 }
 
 section.open {
     left: 270px;
 }
 
-section.active{
-    z-index: 2;
-}
 
 /* TESTED AND ABANDONNED */
 

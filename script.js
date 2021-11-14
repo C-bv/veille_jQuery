@@ -1,4 +1,5 @@
   
+// GENERAL 
 
 // Hide loader + show start button after load
 $(document).ready(function(){
@@ -13,7 +14,7 @@ $(".start").click(function(){
       $(".preloader").fadeTo("fast", 0, function(){
             setTimeout(function(){
                   $(".preloader").hide();
-            },1000);
+            },800);
       });
       hideShowPageSwitcher();
 });
@@ -36,12 +37,11 @@ navButton.click(function(){
       }
 });
 
-// Change color of nav li a 
-
-
+// GENERAL END
 
 // SECTION SWITCHER
 
+// Hide page switcher appopriate button if at section first or bottom
 const hideShowPageSwitcher = function(){
       if ( $("section:last").hasClass("active")) {
             $(".page_switcher_down").hide();
@@ -57,55 +57,54 @@ const hideShowPageSwitcher = function(){
       }
 }
 
+// Toggle and remove active class on appropriate navbar links
+const activeClassLinksTogglerRemover = function() {
+      let sectionActiveIndex = $('section.active').index();
+      $(navLinks).removeClass("active");
+      $(navLinks).eq(sectionActiveIndex).toggleClass("active");
+}
+
+const navLinks = $("li > a");
+
 // Switch to previous section
 $(".page_switcher_up").click( function(){
       $("section.active").prev().toggleClass("active").fadeIn();
       $("section.active").next().removeClass("active").fadeOut();
       hideShowPageSwitcher();
-});
+      activeClassLinksTogglerRemover();
 
+});
 
 // Switch to next section
 $(".page_switcher_down").click( function(){
       $("section.active").next().toggleClass("active").fadeIn();
       $("section.active").prev().removeClass("active").fadeOut();
       hideShowPageSwitcher();
+      activeClassLinksTogglerRemover();
 });
 
-
 // Open section on navbar a click
-let navLinks = $("li > a");
 $(navLinks).click(function(){
-      let aIndex = $("a").index(this);
+      let aClickedIndex = $("a").index(this);
       $("section:visible").removeClass("active").fadeOut();
-      $("section").eq(aIndex).toggleClass("active").fadeIn();
+      $("section").eq(aClickedIndex).toggleClass("active").fadeIn();
+      activeClassLinksTogglerRemover();
       hideShowPageSwitcher();
 });
 
-// i = 1
-// $(navLinks).eq(i).click(function(){
-//       if ($(navLinks).eq(i).not("active")){
-//             $(navLinks).eq(i).toggleClass("active");
-//             $(navLinks).eq(i).siblings().removeClass("active");
-//       }
-// });
+      // CODE BELOW DOESN'T WORK FOR SECTION:LAST.PREV AND SECTION:FIRST.NEXT
 
+            // $(".page_switcher_up").click( function(){
+            //       $("section.active").prev().toggleClass("active").removeClass("back");
+            //       $("section.active").next().removeClass("active").toggleClass("back");
+            //       hideShowPageSwitcher();
+            // });
 
-
-// CODE BELOW DOESN'T WORK FOR SECTION:LAST.PREV AND SECTION:FIRST.NEXT
-
-      // $(".page_switcher_up").click( function(){
-      //       $("section.active").prev().toggleClass("active").removeClass("back");
-      //       $("section.active").next().removeClass("active").toggleClass("back");
-      //       hideShowPageSwitcher();
-      // });
-
-      // $(".page_switcher_down").click( function(){
-      //       $("section.active").next().toggleClass("active").removeClass("back");
-      //       $("section.active").prev().removeClass("active").toggleClass("back");
-      //       hideShowPageSwitcher();
-      // });
-
+            // $(".page_switcher_down").click( function(){
+            //       $("section.active").next().toggleClass("active").removeClass("back");
+            //       $("section.active").prev().removeClass("active").toggleClass("back");
+            //       hideShowPageSwitcher();
+            // });
 
 // SECTION SWITCHER END
 
