@@ -44,16 +44,16 @@ navButton.click(function(){
 // Hide page switcher appopriate button if at section first or bottom
 const hideShowPageSwitcher = function(){
       if ( $("section:last").hasClass("active")) {
-            $(".page_switcher_down").hide();
+            $(".page_switcher_down").fadeOut();
           }
       else {
-            $(".page_switcher_down").show();
+            $(".page_switcher_down").fadeIn();
       }
       if ( $("section:first").hasClass("active")) {
-            $(".page_switcher_up").hide();
+            $(".page_switcher_up").fadeOut();
           }
       else {
-            $(".page_switcher_up").show();
+            $(".page_switcher_up").fadeIn();
       }
 }
 
@@ -72,6 +72,7 @@ $(".page_switcher_up").click( function(){
       $("section.active").next().removeClass("active").fadeOut();
       hideShowPageSwitcher();
       activeClassLinksTogglerRemover();
+      statusRemover();
 
 });
 
@@ -81,6 +82,7 @@ $(".page_switcher_down").click( function(){
       $("section.active").prev().removeClass("active").fadeOut();
       hideShowPageSwitcher();
       activeClassLinksTogglerRemover();
+      statusRemover();
 });
 
 // Open section on navbar a click
@@ -90,6 +92,7 @@ $(navLinks).click(function(){
       $("section").eq(aClickedIndex).toggleClass("active").fadeIn();
       activeClassLinksTogglerRemover();
       hideShowPageSwitcher();
+      statusRemover();
 });
 
       // CODE BELOW DOESN'T WORK FOR SECTION:LAST.PREV AND SECTION:FIRST.NEXT
@@ -113,19 +116,50 @@ $(navLinks).click(function(){
 // DEMO
 
 // Introduction demo
-let liste = $(".demo > ol > li");
-let firstCommand = $(".first_command");
+let liste = $("#ol_container > ol");
 
+// Commande Javascript + border if clicked
+let firstCommand = $(".first_command");
 $(firstCommand).click(function(){
-      $(liste).css("color", "red");
+      document.querySelector('ol').style.color = "red";
+      $(firstCommand).css("border" , "1px solid #2e64b3");
+      $(firstCommand).css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
 });
 
-// document.getElementsByTagName(li).style.color = "red";
-let listeO = $(".demo > ol");
+// Commande jQuery + border if clicked
 let secondCommand = $(".second_command");
 $(secondCommand).click(function(){
-      let ddo = document.body.listO.getElementsByTagName("li");
-      ddo[0].style.color = "red";
-      console.log(ddo[0]);
-      
+      $(liste).css("color", "red");
+      $(secondCommand).css("border" , "1px solid #2e64b3");
+      $(secondCommand).css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
 });
+
+// Reset button
+let resetButton = $(".demo > button");
+$(resetButton).click(function(){
+      $(liste).removeAttr('style');
+});
+
+//Reset button icon flip on click + reset after timing
+let resetButtonIcon = $("button > i");
+$(resetButton).click(function(){
+      if($(firstCommand).attr("style") || $(secondCommand).attr("style")){
+            $(resetButtonIcon).css("transform", "rotate(360deg)");
+            $(firstCommand).removeAttr('style');
+            $(secondCommand).removeAttr('style');
+            setTimeout(function(){
+                  $(resetButtonIcon).removeAttr("style");
+            },300); 
+      }
+      else{
+            $(resetButton).effect( "shake", {times:4}, "fast" );
+      }
+});
+
+// Remove all styles of demo
+let demoDiv = $(".demo");
+const statusRemover = function() {
+      $(demoDiv).find('*').removeAttr('style');
+}
+
+// DEMO END

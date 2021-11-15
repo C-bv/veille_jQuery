@@ -1,4 +1,8 @@
 @import url("https://use.fontawesome.com/releases/v5.15.4/css/all.css");
+@import url('https://fonts.googleapis.com/css?family=Rubik:500,700,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+
 
 /* GENERAL */
 
@@ -7,6 +11,7 @@
 }
 
 body {
+    font-family: 'PT Sans', sans-serif;
     margin: 0;
     line-height: 1.5;
     overflow-y: hidden;
@@ -202,7 +207,6 @@ aside .nav li {
 }
 
 aside .nav li a {
-    font-size: 16px;
     font-weight: 600;
     color: #2e64b3;
     text-decoration: none;
@@ -276,7 +280,7 @@ aside .nav li a.active{
 
 section {
     position: fixed;
-    background-color: #9b9b9b;
+    background-color: #FFF;
     height: 100vh;
     padding: 70px 30px;
     left: 0;
@@ -317,6 +321,7 @@ section h2:after {
     background-color: #2e64b3;
 }
 
+/* HOME SECTION */
 #home_logo_container{
     display: flex;
     justify-content: center;
@@ -331,6 +336,7 @@ section h2:after {
 }
 
 #mini_home_container{
+    flex: 1 1 0px;
     max-width: 500px;
     display: flex;
     flex-direction: column;
@@ -339,13 +345,25 @@ section h2:after {
 }
 
 #welcome_container{
-    text-align: justify;
+    text-align: center;
 }
 
 #links_container{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#links_container a{
+    text-decoration: none;
+    color: #2e64b3;
+    line-height: 2.2;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+#links_container a:hover{
+    transform: scale(1.2);
 }
 
     /* TESTED AND ABANDONNED */
@@ -393,19 +411,70 @@ section h2:after {
 .demo{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
-.demo div, .demo ol{
+.demo #ol_container, .demo .commands, .demo .reset_demo{
+    margin: 5px 10px;
+}
+
+#ol_container, .demo.commands{
     min-width: 200px;
 }
 
-.commands div{
-    cursor: pointer;
+#ol_container{
+    border: 1px solid #e8dfec;
+    border-radius: 5px;
+    background-color: #FFF;
 }
 
+.commands{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: monospace;
+}
 
+button.reset_demo{
+    cursor: pointer;
+    border: 1px solid #e8dfec;
+    border-radius: 5px;
+    color: #2e64b3;
+    background:none;  
+    align-self: flex-start;
+    font-size: 1.4em;
+    padding: 5px 8px;
+    transition: all 0.3s ease;
+}
+
+button.reset_demo:hover{
+    border: 1px solid #2e64b3;
+    color: red;
+}
+
+button.reset_demo i{
+    transition: all 0.3s ease;
+}
+
+.first_command, .second_command{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45%;
+    width: -webkit-fill-available;
+    cursor: pointer;
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #e8dfec;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.commands .first_command:hover, .second_command:hover{
+    border: 1px solid #2e64b3;
+}
 
 /* DEMOS END */
 
