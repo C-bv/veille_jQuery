@@ -17,6 +17,7 @@ body {
     overflow-y: hidden;
 }
 
+
 /* GENERAL END */
 
 
@@ -344,7 +345,7 @@ section h2:after {
         align-content: center;
     }
 
-    #content_container{
+    .content_container{
         text-align: center;
     }
 
@@ -373,6 +374,7 @@ section h2:after {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
+        align-items: center;
     }
 
     #mini_content_container > div{
@@ -383,6 +385,30 @@ section h2:after {
         flex: 1 1 200px;
     }
 
+    .mini_slide_container h3{
+        display: inline-block;
+    }
+
+    #mini_slide_button{
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        color: #2e64b3;
+        background:none;  
+        align-self: flex-start;
+        font-size: 1.2em;
+        padding: 5px 8px;
+        transition: all 0.3s ease;
+    }
+    
+    #mini_slide_button:hover{
+        transform: scale(1.2);
+    }
+
+    .mini_slide_container .content_container{
+        display: none;
+    }
+    
     #big_text_container{
         color: #2e64b3;
         font-size: 1.5em;
@@ -395,8 +421,8 @@ section h2:after {
     }
 
     #text_container p{
-        display: none;
         margin: 0px;
+        text-align: justify;
     }
 
 
@@ -435,7 +461,7 @@ section h2:after {
     font-family: monospace;
 }
 
-button.reset_demo, #text_container button{
+button.reset_demo{
     cursor: pointer;
     border: 1px solid #e8dfec;
     border-radius: 5px;

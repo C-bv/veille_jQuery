@@ -73,6 +73,7 @@ $(".page_switcher_up").click( function(){
       hideShowPageSwitcher();
       activeClassLinksTogglerRemover();
       statusRemover();
+      slideRemover();
 
 });
 
@@ -83,6 +84,7 @@ $(".page_switcher_down").click( function(){
       hideShowPageSwitcher();
       activeClassLinksTogglerRemover();
       statusRemover();
+      slideRemover();
 });
 
 // Open section on navbar a click
@@ -93,18 +95,24 @@ $(navLinks).click(function(){
       activeClassLinksTogglerRemover();
       hideShowPageSwitcher();
       statusRemover();
+      slideRemover();
 });
 
 // SECTION SWITCHER END
 
 
-// Open text button
-let textButton = $("#text_container > button");
-let textContainerP = $("#text_container > p");
+// Open slide button
+let textButton = $(".mini_slide_container > button");
 $(textButton).click(function(){
       $(this).next().slideToggle();
 });
 
+// Remove all styles of content containers
+let contentContainer = $(".content_container");
+const slideRemover = function() {
+      $(contentContainer).removeAttr("style");
+      console.log(contentContainer);
+}
 
 
 // DEMO
@@ -154,7 +162,7 @@ $(resetButton).click(function(){
             },300); 
       }
       else{
-            $(resetButton).effect( "shake", {times:4}, "fast" );
+
       }
 });
 
