@@ -6,7 +6,7 @@ $(document).ready(function(){
       setTimeout(function(){
             $(".loader").css("opacity","0");
             $(".start").css("opacity","1");
-      },90); //9000
+      },9000); //9000
    });
 
 // Hide preloader + page_switcher_up
@@ -104,14 +104,22 @@ $(navLinks).click(function(){
 // Open slide button
 let textButton = $(".mini_slide_container > button");
 $(textButton).click(function(){
-      $(this).next().slideToggle();
+      if($(this).next().is(':hidden')){
+            $(this).next().slideToggle();
+            $(this).css("color", "red");
+            $(this).css("transform", "rotate(90deg)");
+      }
+      else if($(this).next().is(':visible')){
+            $(this).next().slideToggle();
+            $(this).removeAttr("style");
+      }
 });
 
-// Remove all styles of content containers
+// Remove all styles of content containers + open slide buttons
 let contentContainer = $(".content_container");
 const slideRemover = function() {
       $(contentContainer).removeAttr("style");
-      console.log(contentContainer);
+      $(textButton).removeAttr("style");
 }
 
 
@@ -124,6 +132,7 @@ let liste = $("#ol_container > ol");
 let firstCommand = $(".first_command");
 $(firstCommand).click(function(){
       if($(firstCommand).attr("style") || $(secondCommand).attr("style")){
+           // DO NOTHING
       }
       else{
             document.querySelector('ol').style.color = "red";
@@ -136,6 +145,7 @@ $(firstCommand).click(function(){
 let secondCommand = $(".second_command");
 $(secondCommand).click(function(){
       if($(firstCommand).attr("style") || $(secondCommand).attr("style")){
+            // DO NOTHING
       }
       else{
             document.querySelector('ol').style.color = "red";
@@ -159,14 +169,11 @@ $(resetButton).click(function(){
             $(secondCommand).removeAttr('style');
             setTimeout(function(){
                   $(resetButtonIcon).removeAttr("style");
-            },300); 
-      }
-      else{
-
+            },300);
       }
 });
 
-// Remove all styles of demo
+// Remove all styles of div demo
 let demoDiv = $(".demo");
 const statusRemover = function() {
       $(demoDiv).find('*').removeAttr('style');
