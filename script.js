@@ -6,7 +6,7 @@ $(document).ready(function(){
       setTimeout(function(){
             $(".loader").css("opacity","0");
             $(".start").css("opacity","1");
-      },900); //9000
+      },90); //9000
    });
 
 // Hide preloader + page_switcher_up
@@ -95,21 +95,15 @@ $(navLinks).click(function(){
       statusRemover();
 });
 
-      // CODE BELOW DOESN'T WORK FOR SECTION:LAST.PREV AND SECTION:FIRST.NEXT
-
-            // $(".page_switcher_up").click( function(){
-            //       $("section.active").prev().toggleClass("active").removeClass("back");
-            //       $("section.active").next().removeClass("active").toggleClass("back");
-            //       hideShowPageSwitcher();
-            // });
-
-            // $(".page_switcher_down").click( function(){
-            //       $("section.active").next().toggleClass("active").removeClass("back");
-            //       $("section.active").prev().removeClass("active").toggleClass("back");
-            //       hideShowPageSwitcher();
-            // });
-
 // SECTION SWITCHER END
+
+
+// Open text button
+let textButton = $("#text_container > button");
+let textContainerP = $("#text_container > p");
+$(textButton).click(function(){
+      $(this).next().slideToggle();
+});
 
 
 
@@ -121,17 +115,25 @@ let liste = $("#ol_container > ol");
 // Commande Javascript + border if clicked
 let firstCommand = $(".first_command");
 $(firstCommand).click(function(){
-      document.querySelector('ol').style.color = "red";
-      $(firstCommand).css("border" , "1px solid #2e64b3");
-      $(firstCommand).css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
+      if($(firstCommand).attr("style") || $(secondCommand).attr("style")){
+      }
+      else{
+            document.querySelector('ol').style.color = "red";
+            $(this).css("border" , "1px solid #2e64b3");
+            $(this).css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
+      }
 });
 
 // Commande jQuery + border if clicked
 let secondCommand = $(".second_command");
 $(secondCommand).click(function(){
-      $(liste).css("color", "red");
-      $(secondCommand).css("border" , "1px solid #2e64b3");
-      $(secondCommand).css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
+      if($(firstCommand).attr("style") || $(secondCommand).attr("style")){
+      }
+      else{
+            document.querySelector('ol').style.color = "red";
+            $(this).css("border" , "1px solid #2e64b3");
+            $(this).css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
+      }
 });
 
 // Reset button
