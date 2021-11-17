@@ -15,6 +15,7 @@ body {
     margin: 0;
     line-height: 1.5;
     overflow-y: hidden;
+    color:#292929
 }
 
 
@@ -24,7 +25,7 @@ body {
 /* PRELOADER */
 
 .preloader{
-	background-color: #fff;
+	background-color: #FFF;
 	position: fixed;
 	left:0;
 	top:0;
@@ -144,7 +145,7 @@ body {
 
 aside {
     width: 270px;
-    background-color: #fff;
+    background-color: #FFF;
     border-right: 1px solid #e8dfec;
     position: fixed;
     height: 100%;
@@ -437,6 +438,7 @@ section h2:after {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    color: #292929;
 }
 
 .demo #ol_container, .demo .commands, .demo .reset_demo{

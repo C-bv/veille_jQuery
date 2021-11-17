@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="darkmode.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <title>Veille jQuery</title>
@@ -29,6 +30,8 @@
             </div>
             <div class="aside_inner">
                 <img src="img/logo.svg" alt="Logo jQuery">
+                <button onclick="darkModeOn()">Dark Mode on</button>
+                <button onclick="darkModeOff()">Dark Mode off</button>
                 <ul class="nav">
                     <li><a href="#" class="active"> Home</a></li>
                     <li><a href="#">Introduction</a></li>
@@ -87,17 +90,15 @@
                                 <div id="big_text_container">
                                     <p>jQuery = bibliothèque JavaScript<br>
                                         John Resig - 2006<br>
+                                        Animations, manipulation du CSS, gestion d'évènements<br>
                                         Bibliothèque front-end la plus utilisée au monde
                                     </p>
                                 </div>
                                 <div id="text_container">
                                     <p>jQuery est une bibliothèque JavaScript libre et multiplateforme créée par John
-                                        Resig en 2006, qui a pour but de pour faciliter l'écriture de scripts côté
-                                        client dans le code HTML des pages web.
-                                        Le but de la bibliothèque étant le parcours et la modification du DOM ,elle
-                                        contient de nombreuses fonctionnalités ; notamment des animations, la
-                                        manipulation des feuilles de style en cascade (accessibilité des classes et
-                                        attributs), la gestion des évènements, etc.
+                                        Resig en 2006.
+                                        Cette bibliothèque contient de nombreuses fonctionnalités, notamment des animations, la
+                                        manipulation du CSS, la gestion des évènements, etc.
                                         jQuery est à l'heure actuelle la bibliothèque front-end la plus utilisée au
                                         monde (plus de la moitié des sites Web intègrent jQuery).
                                     </p>
@@ -112,7 +113,36 @@
                         <div class="content_container">
                             <div id="mini_content_container">
                                 <div id="big_text_container">
-                                    <p>Simplifier l'utilisation de JavaScript<br>
+                                    <p>Simplifier la manipulation du DOM HTML<br>
+                                        Gestion d’événements<br>
+                                        Création d’animations CSS<br>
+                                        Blocs de code JavaScript prêts à l'emploi<br>
+                                        Gain de temps de développement<br>
+                                        Compatibilité navigateurs<br>
+                                    </p>
+                                </div>
+                                <div id="text_container">
+                                    <p>jQuery a été créé pour simplifier la manipulation du DOM HTML,
+                                        la gestion d’événements et la création d’animations CSS.
+                                        La librairie consiste en un ensemble de blocs de codes
+                                        JavaScript préconçus qui sont enfermés dans des méthodes.
+                                        Il suffit d’appeler ces méthodes pour exécuter le code qu’elles
+                                        contiennent.
+                                        jQuery permet donc un gain de temps de développement 
+                                        et d’être assuré de la validité de notre code.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Javascript dans tout ça ? -->
+                    <div class="mini_slide_container">
+                        <h3>Javascript dans tout ça ?</h3>
+                        <button id="mini_slide_button"><i class="fas fa-chevron-right"></i></button>
+                        <div class="content_container">
+                            <div id="mini_content_container">
+                                <div id="big_text_container">
+                                    <p>PAS une alternative au JavaScript<br>
                                         Blocs de code JavaScript prêts à l'emploi<br>
                                         Faciliter l'écriture de scripts<br>
                                         Parcours et modification du DOM<br>
@@ -120,18 +150,10 @@
                                     </p>
                                 </div>
                                 <div id="text_container">
-                                    <p>Le rôle de jQuery est de simplifier l’utilisation de Javascript en fournissant un
-                                        ensemble de codes déjà prêts à l’emploi.
-                                        En effet, pour une action similaire, un script écrit en jQuery est bien plus
+                                    <p>jQuery ne doit pas être vu comme une alternative au JavaScript mais plutôt comme
+                                        un complément.
+                                        Pour une action similaire, un script écrit en jQuery est bien plus
                                         simple qu'en JavaScript.
-                                        En l’occurrence, la librairie jQuery consiste en un ensemble de blocs de codes
-                                        JavaScripts préconçus et qui vont être généralement enfermés dans des méthodes.
-                                        Il va donc nous suffire d’appeler ces méthodes pour exécuter le code qu’elles
-                                        contiennent.
-                                        Utiliser jQuery va donc pouvoir être très avantageux pour nous à deux niveaux
-                                        différents : on va d’une part gagner beaucoup de temps de développement en
-                                        utilisant les outils mis à notre disposition par cette librairie et d’autre part
-                                        être assuré de la validité de notre code.
                                     </p>
                                 </div>
                             </div>
@@ -153,42 +175,6 @@
                                     </div>
                                 </div>
                                 <button class="reset_demo"><i class="fas fa-undo"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Javascript dans tout ça ? -->
-                    <div class="mini_slide_container">
-                        <h3>Javascript dans tout ça ?</h3>
-                        <button id="mini_slide_button"><i class="fas fa-chevron-right"></i></button>
-                        <div class="content_container">
-                            <div id="mini_content_container">
-                                <div id="big_text_container">
-                                    <p>PAS une alternative au JavaScript<br>
-                                        Blocs de code JavaScript prêts à l'emploi<br>
-                                        Faciliter l'écriture de scripts<br>
-                                        Parcours et modification du DOM<br>
-                                        Bibliothèque front-end la plus utilisée au monde
-                                    </p>
-                                </div>
-                                <div id="text_container">
-                                    <p>jQuery ne doit pas être vu comme une alternative au JavaScript mais plutôt comme
-                                        un ajout
-                                        : nous allons utiliser jQuery au côté du JavaScript classique dans nos scripts.
-                                        Par ailleurs, jQuery ne dispense pas et ne doit pas remplacer l’apprentissage du
-                                        JavaScript ni être vu comme un « raccourci » pour apprendre le JavaScript.
-                                        Au contraire : pour tirer avantage de jQuery, il est fortement recommandé
-                                        d’avoir déjà
-                                        une bonne connaissance et une bonne maîtrise du langage JavaScript et de son
-                                        fonctionnement général.
-                                        De même, jQuery n’est pas non plus une solution miracle qui va faire tout le
-                                        travail à
-                                        votre place. Cette bibliothèque est très bien faite et c’est un outil très
-                                        puissant,
-                                        mais il vous faudra tout de même vous impliquer et réfléchir afin de créer des
-                                        scripts
-                                        performants et bien construits.
-                                    </p>
-                                </div>
                             </div>
                         </div>
                     </div>

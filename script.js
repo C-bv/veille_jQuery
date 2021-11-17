@@ -1,6 +1,18 @@
   
 // GENERAL 
 
+// Dark mode
+let dark = document.body;
+
+function darkModeOn() {
+  dark.classList.add("dark");
+  }
+
+function darkModeOff() {
+	dark.classList.remove("dark");
+	}
+
+
 // Hide loader + show start button after load
 $(document).ready(function(){
       setTimeout(function(){
@@ -21,9 +33,7 @@ $(".start").click(function(){
 
 // Open/close aside + nav_toogler + section
 $(".nav_toggler").click(function(){
-      $("aside").toggleClass("open");
-      $(".nav_toggler").toggleClass("open");
-      $("section").toggleClass("open");
+      $("aside , .nav_toggler, section").toggleClass("open");
 });
 
 // Change nav_toogler icon + color if aside open
@@ -58,13 +68,14 @@ const hideShowPageSwitcher = function(){
 }
 
 // Toggle and remove active class on appropriate navbar links
+const navLinks = $("li > a");
 const activeClassLinksTogglerRemover = function() {
       let sectionActiveIndex = $('section.active').index();
       $(navLinks).removeClass("active");
       $(navLinks).eq(sectionActiveIndex).toggleClass("active");
 }
 
-const navLinks = $("li > a");
+
 
 // Switch to previous section
 $(".page_switcher_up").click( function(){
@@ -180,3 +191,5 @@ const statusRemover = function() {
 }
 
 // DEMO END
+
+

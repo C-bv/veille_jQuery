@@ -1,0 +1,11 @@
+/* DARK MODE */
+
+body.dark{
+    color: #FFF;
+}
+
+body.dark section, body.dark aside{
+    background: #262626;
+}
+
+/* DARK MODE END*/
