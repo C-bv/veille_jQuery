@@ -6,7 +6,7 @@ $(document).ready(function(){
       setTimeout(function(){
             $(".loader").css("opacity","0");
             $(".start").css("opacity","1");
-      },9000); //9000
+      },90); //9000
    });
 
 // Hide preloader + page_switcher_up
