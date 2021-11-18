@@ -1,4 +1,4 @@
-  
+
 // GENERAL 
 
 // Dark mode
@@ -193,11 +193,42 @@ const statusRemover = function() {
 
 // DEMO END
 
+// TEXT COMPOSER
+
+const textComposer = $(".text_composer");
+const arrow = $(".text_composer > i");
+let offset = arrow.offset();
+$(textComposer).click(function(){
+
+      if($(arrow).is(':hidden')){
+            $(arrow).fadeIn();
+            $("#alias_0, #alias_1").css("color", "red")
+            $("#alias_0, #alias_1").fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
+      }
+      else if($(arrow).css("left") == "25px"){
+            $("#alias_0, #alias_1").removeAttr("style");
+            $(arrow).css("left", "84px");
+            $("#selecteur").css("color", "red")
+            $("#selecteur").fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
+      }
+      else if($(arrow).css("left") == "84px"){
+            $("#selecteur").removeAttr("style");
+            $(arrow).css("left", "169px")
+            $("#action").css("color", "red")
+            $("#action").fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
+      }
+      else if($(arrow).css("left") == "169px"){
+            $("#action").removeAttr("style");
+            $(arrow).css("left", "25px")
+            $(arrow).fadeOut();
+      }
+});   
+
+// TEXT COMPOSER END
+
 
 // LIVE CODING
 
 const liveCodingContainer = $("#live_coding_container");
-
-
 
 // LIVE CODING END

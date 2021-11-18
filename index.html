@@ -53,7 +53,7 @@
                 <div id="home_container">
                     <div id="mini_home_container">
                         <h3>Welcome !</h3>
-                        <div class="content_container">
+                        <div class="home_content_container">
                             <p>Ce site web a pour but de vous faire découvrir jQuery !<br>
                                 Vous y trouverez le contenu de ma veille, ainsi que quelques liens pour aller plus loin.
                                 L'intégralité des animations de ce site ont étés codés en utlisant jQuery, n'hésitez pas
@@ -192,24 +192,32 @@
                         <div class="content_container">
                             <div class="mini_content_container">
                                 <div class="big_text_container">
-                                    <p>Fichier compressé<br>
-                                        Fichier non compressé<br>
-                                        Bibliothèque front-end la plus utilisée au monde
+                                    <p>Fichier compressé :<br>
+                                        version de production du site web<br>
+                                        Fichier non compressé :<br>
+                                        version de développement du site web.
                                     </p>
                                 </div>
                                 <div class="text_container">
                                     <p>Pour pouvoir utiliser la librairie jQuery, il va falloir inclure un fichier jQuery dans la page HTML.<br>
                                         Il existe deux types de fichiers: un fichier compressé et un fichier non compressé.<br>
                                         La version compressée a pour but de réduire le poids total de la librairie afin d’améliorer les performances du site web.
-                                        C’est la version généralement utilisée sur un site live.<br>
+                                        C’est la version utilisée sur un site en production.<br>
                                         La version non compressée est une version lisible de la librairie (commentaires, indentation, etc.).<br>
                                         A utiliser lors du développement du site web.
                                     </p>
                                 </div>
                             </div>
+                            <div class="demo">
+                                <div class="code_container">
+                                    <span class="tagnamecolor"><span class="tagcolor">&lt;</span>head<span class="tagcolor">&gt;</span></span><br>
+                                    <span class="tagnamecolor"><span class="tagcolor">&lt;</span>script<span class="attributecolor"> src<span class="attributevaluecolor">="jquery-3.6.0.min.js"</span></span><span class="tagcolor">&gt;</span></span><span class="jscolor"></span><span class="tagnamecolor"><span class="tagcolor">&lt;</span>/script<span class="tagcolor">&gt;</span></span><br>
+                                    <span class="tagnamecolor"><span class="tagcolor">&lt;</span>/head<span class="tagcolor">&gt;</span></span>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!-- La documentation jQuery -->
+                    <!-- Inclure jQuery via un CDN -->
                     <div class="mini_slide_container">
                         <h3>Inclure jQuery via un CDN</h3>
                         <button id="mini_slide_button"><i class="fas fa-chevron-right"></i></button>
@@ -233,6 +241,13 @@
                                     </p>
                                 </div>
                             </div>
+                            <div class="demo">
+                                <div class="code_container">
+                                    <span class="tagnamecolor"><span class="tagcolor">&lt;</span>head<span class="tagcolor">&gt;</span></span><br>
+                                    <span class="tagnamecolor"><span class="tagcolor">&lt;</span>script<span class="attributecolor"> src<span class="attributevaluecolor">="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"</span></span><span class="tagcolor">&gt;</span></span><span class="jscolor"></span><span class="tagnamecolor"><span class="tagcolor">&lt;</span>/script<span class="tagcolor">&gt;</span></span><br>
+                                    <span class="tagnamecolor"><span class="tagcolor">&lt;</span>/head<span class="tagcolor">&gt;</span></span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -250,18 +265,24 @@
                         <div class="content_container">
                             <div class="mini_content_container">
                                 <div class="big_text_container">
-                                    <p>jQuery = bibliothèque JavaScript<br>
-                                        John Resig - 2006<br>
-                                        Bibliothèque front-end la plus utilisée au monde
+                                    <div class="text_composer">
+                                        <i class="fas fa-chevron-down"></i>
+                                        <span id="alias_0">$(</span>
+                                        <span id="selecteur">"section"</span>
+                                        <span id="alias_1">)</span>
+                                        <span id="action">.hide()</span>
+                                    </div>
+                                    <p>Alias jQuery() ou $()<br>
+                                        Ciblage d'éléments via les sélecteurs css<br>
+                                        A (selector)  HTML elements<br>
+                                        A appeler l'action() to be performed on the element(s)
                                     </p>
                                 </div>
                                 <div class="text_container">
                                     <p>Afin de pouvoir accéder aux différentes propriétés et méthodes de la librairie, on
-                                        utilise les alias jQuery() ou $().
-                                        Font exactement la même chose, sélectionner nos éléments HTML.
-                                        pour sélectionner un élément HTML en jQuery, il va nous suffire de mentionner le
-                                        sélecteur CSS associé à cet élément dans notre méthode $() (ou dans la méthode
-                                        jquery()).
+                                        utilise les alias jQuery() ou $().<br>
+                                        Afin de cibler un élément HTML, il suffit de mentionner le sélecteur CSS associé 
+                                        à cet élément dans notre méthode $().
                                     </p>
                                 </div>
                             </div>

@@ -346,7 +346,7 @@ section h2:after {
         align-content: center;
     }
 
-    .content_container{
+    .home_content_container{
         text-align: center;
     }
 
@@ -415,6 +415,7 @@ section h2:after {
         font-size: 1.5em;
         font-weight: bold;
         line-height: 2;
+        text-align: center;
     }
 
     .text_container button:hover{
@@ -426,6 +427,22 @@ section h2:after {
         text-align: justify;
     }
 
+
+    /* FONCTIONNEMENT SECTION */
+
+    .text_composer{
+        cursor: pointer;
+    }
+
+    .text_composer i{
+        display: none;
+        position: relative;
+        top: -20px;
+        left: 25px;
+        transition: all 0.3s ease;
+    }
+
+    /* FONCTIONNEMENT SECTION END */
 
 
 /* SECTION END */
@@ -439,6 +456,8 @@ section h2:after {
     justify-content: center;
     flex-wrap: wrap;
     color: #292929;
+    font-family: monospace;
+    text-align: left;
 }
 
 .demo #ol_container, .demo .commands, .demo .reset_demo{
@@ -460,7 +479,6 @@ section h2:after {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    font-family: monospace;
 }
 
 button.reset_demo{
@@ -500,6 +518,31 @@ button.reset_demo i{
 
 .commands .first_command:hover, .second_command:hover{
     border: 1px solid #2e64b3;
+}
+
+.code_container{
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid #e8dfec;
+    border-radius: 5px;
+    line-height: 1.8;
+    font-size: 1.2em;
+}
+
+.tagnamecolor{
+    color: #a30008;
+}
+
+.tagcolor{
+    color: #6d6d6d;
+}
+
+.attributecolor{
+    color: red;
+}
+
+.attributevaluecolor{
+    color: mediumblue;
 }
 
 /* DEMOS END */
