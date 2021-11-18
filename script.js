@@ -5,12 +5,12 @@
 let dark = document.body;
 
 function darkModeOn() {
-  dark.classList.add("dark");
-  }
+      dark.classList.add("dark");
+}
 
 function darkModeOff() {
 	dark.classList.remove("dark");
-	}
+}
 
 
 // Hide loader + show start button after load
@@ -19,7 +19,7 @@ $(document).ready(function(){
             $(".loader").css("opacity","0");
             $(".start").css("opacity","1");
       },90); //9000
-   });
+});
 
 // Hide preloader + page_switcher_up
 $(".start").click(function(){
@@ -75,7 +75,16 @@ const activeClassLinksTogglerRemover = function() {
       $(navLinks).eq(sectionActiveIndex).toggleClass("active");
 }
 
-
+// Open section on navbar a click
+$(navLinks).click(function(){
+      let aClickedIndex = $("a").index(this);
+      $("section:visible").removeClass("active").fadeOut();
+      $("section").eq(aClickedIndex).toggleClass("active").fadeIn();
+      activeClassLinksTogglerRemover();
+      hideShowPageSwitcher();
+      statusRemover();
+      slideRemover();
+});
 
 // Switch to previous section
 $(".page_switcher_up").click( function(){
@@ -98,24 +107,16 @@ $(".page_switcher_down").click( function(){
       slideRemover();
 });
 
-// Open section on navbar a click
-$(navLinks).click(function(){
-      let aClickedIndex = $("a").index(this);
-      $("section:visible").removeClass("active").fadeOut();
-      $("section").eq(aClickedIndex).toggleClass("active").fadeIn();
-      activeClassLinksTogglerRemover();
-      hideShowPageSwitcher();
-      statusRemover();
-      slideRemover();
-});
-
 // SECTION SWITCHER END
 
 
 // Open slide button
-let textButton = $(".mini_slide_container > button");
+const textButton = $(".mini_slide_container > button");
 $(textButton).click(function(){
       if($(this).next().is(':hidden')){
+            // Hide all content
+            slideRemover()
+            // Show content selected
             $(this).next().slideToggle();
             $(this).css("color", "red");
             $(this).css("transform", "rotate(90deg)");
@@ -129,7 +130,7 @@ $(textButton).click(function(){
 // Remove all styles of content containers + open slide buttons
 let contentContainer = $(".content_container");
 const slideRemover = function() {
-      $(contentContainer).removeAttr("style");
+      $(contentContainer).slideUp();
       $(textButton).removeAttr("style");
 }
 
@@ -193,3 +194,10 @@ const statusRemover = function() {
 // DEMO END
 
 
+// LIVE CODING
+
+const liveCodingContainer = $("#live_coding_container");
+
+
+
+// LIVE CODING END

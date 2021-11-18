@@ -37,9 +37,7 @@
                     <li><a href="#">Introduction</a></li>
                     <li><a href="#">Prérequis</a></li>
                     <li><a href="#">Fonctionnement</a></li>
-                    <li><a href="#">Todo</a></li>
-                    <li><a href="#">Todo</a></li>
-                    <li><a href="#">Todo</a></li>
+                    <li><a href="#">Live coding</a></li>
                 </ul>
             </div>
             </div>
@@ -68,7 +66,8 @@
                         <h3>Liens utiles</h3>
                         <div id="links_container">
                             <a href="https://jquery.com/" target="_blank">jQuery.com</a>
-                            <a href="https://code.jquery.com/" target="_blank">jQuery Library</a>
+                            <a href="https://api.jquery.com/" target="_blank">jQuery Documentation</a>
+                            <a href="https://code.jquery.com/" target="_blank">Downloads</a>
                             <a href="https://learn.jquery.com/" target="_blank">Learn jQuery</a>
                             <a href="https://play.kahoot.it/v2/?quizId=e9124abf-34ab-4e75-abdd-ca6b06bcb9bf" target="_blank">Kahoot</a>
                         </div>
@@ -80,25 +79,25 @@
             <!-- INTRODUCTION SECTION -->
             <section class="introduction_section">
                 <h2>Introduction</h2>
-                <div id="slide_container">
+                <div class="slide_container">
                     <!-- Qu'est-ce que jQuery ? -->
                     <div class="mini_slide_container">
                         <h3>Qu'est-ce que jQuery ?</h3>
                         <button id="mini_slide_button"><i class="fas fa-chevron-right"></i></button>
                         <div class="content_container">
-                            <div id="mini_content_container">
-                                <div id="big_text_container">
+                            <div class="mini_content_container">
+                                <div class="big_text_container">
                                     <p>jQuery = bibliothèque JavaScript<br>
                                         John Resig - 2006<br>
                                         Animations, manipulation du CSS, gestion d'évènements<br>
                                         Bibliothèque front-end la plus utilisée au monde
                                     </p>
                                 </div>
-                                <div id="text_container">
+                                <div class="text_container">
                                     <p>jQuery est une bibliothèque JavaScript libre et multiplateforme créée par John
-                                        Resig en 2006.
+                                        Resig en 2006.<br>
                                         Cette bibliothèque contient de nombreuses fonctionnalités, notamment des animations, la
-                                        manipulation du CSS, la gestion des évènements, etc.
+                                        manipulation du CSS, la gestion des évènements, etc.<br>
                                         jQuery est à l'heure actuelle la bibliothèque front-end la plus utilisée au
                                         monde (plus de la moitié des sites Web intègrent jQuery).
                                     </p>
@@ -111,8 +110,8 @@
                         <h3>À quoi ça sert ?</h3>
                         <button id="mini_slide_button"><i class="fas fa-chevron-right"></i></button>
                         <div class="content_container">
-                            <div id="mini_content_container">
-                                <div id="big_text_container">
+                            <div class="mini_content_container">
+                                <div class="big_text_container">
                                     <p>Simplifier la manipulation du DOM HTML<br>
                                         Gestion d’événements<br>
                                         Création d’animations CSS<br>
@@ -121,15 +120,15 @@
                                         Compatibilité navigateurs<br>
                                     </p>
                                 </div>
-                                <div id="text_container">
+                                <div class="text_container">
                                     <p>jQuery a été créé pour simplifier la manipulation du DOM HTML,
-                                        la gestion d’événements et la création d’animations CSS.
+                                        la gestion d’événements et la création d’animations CSS.<br>
                                         La librairie consiste en un ensemble de blocs de codes
-                                        JavaScript préconçus qui sont enfermés dans des méthodes.
+                                        JavaScript préconçus qui sont enfermés dans des méthodes.<br>
                                         Il suffit d’appeler ces méthodes pour exécuter le code qu’elles
-                                        contiennent.
+                                        contiennent.<br>
                                         jQuery permet donc un gain de temps de développement 
-                                        et d’être assuré de la validité de notre code.
+                                        et d’assurer une compatibilité de notre code avec les différents navigateurs.
                                     </p>
                                 </div>
                             </div>
@@ -140,20 +139,21 @@
                         <h3>Javascript dans tout ça ?</h3>
                         <button id="mini_slide_button"><i class="fas fa-chevron-right"></i></button>
                         <div class="content_container">
-                            <div id="mini_content_container">
-                                <div id="big_text_container">
-                                    <p>PAS une alternative au JavaScript<br>
-                                        Blocs de code JavaScript prêts à l'emploi<br>
-                                        Faciliter l'écriture de scripts<br>
-                                        Parcours et modification du DOM<br>
-                                        Bibliothèque front-end la plus utilisée au monde
+                            <div class="mini_content_container">
+                                <div class="big_text_container">
+                                    <p>Pas une alternative au JavaScript<br>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        Syntaxe plus simple que JavaScript
                                     </p>
                                 </div>
-                                <div id="text_container">
+                                <div class="text_container">
                                     <p>jQuery ne doit pas être vu comme une alternative au JavaScript mais plutôt comme
-                                        un complément.
+                                        un complément.<br>
+                                        L'utilisation de jQuery est devenue moins pertinente depuis l'arrivée d'Angular et React.<br>
                                         Pour une action similaire, un script écrit en jQuery est bien plus
-                                        simple qu'en JavaScript.
+                                        court et simple qu'en JavaScript.
                                     </p>
                                 </div>
                             </div>
@@ -184,67 +184,52 @@
             <!-- PREREQUIS SECTION -->
             <section class="prérequis_section">
                 <h2>Prérequis</h2>
-                <div id="slide_container">
+                <div class="slide_container">
                     <!-- Télécharger et inclure jQuery -->
                     <div class="mini_slide_container">
                         <h3>Télécharger et inclure jQuery</h3>
                         <button id="mini_slide_button"><i class="fas fa-chevron-right"></i></button>
                         <div class="content_container">
-                            <div id="mini_content_container">
-                                <div id="big_text_container">
-                                    <p>jQuery = bibliothèque JavaScript<br>
-                                        John Resig - 2006<br>
+                            <div class="mini_content_container">
+                                <div class="big_text_container">
+                                    <p>Fichier compressé<br>
+                                        Fichier non compressé<br>
                                         Bibliothèque front-end la plus utilisée au monde
                                     </p>
                                 </div>
-                                <div id="text_container">
-                                    <p>Pour pouvoir utiliser ces codes, il va falloir les inclure dans nos pages.
-                                        deux types de fichiers: des fichiers compressés et des fichiers non compressés.
-                                        La copie de jQuery compressée ne contient aucun espace entre les codes. Le but est de
-                                        réduire le poids total de la librairie afin d’améliorer les performances de votre site.
-                                        C’est la version que nous placerons généralement sur notre site « live » (en
-                                        production).
-                                        Cependant, pour travailler, je vous conseille plutôt la version non compressée, qui est
-                                        une version lisible de la librairie (avec notamment des commentaires, une bonne
-                                        indentation, etc.).
-                                        Cela vous permettra d’étudier plus facilement, si vous le souhaitez, les scripts
-                                        composant la librairie jQuery.
+                                <div class="text_container">
+                                    <p>Pour pouvoir utiliser la librairie jQuery, il va falloir inclure un fichier jQuery dans la page HTML.<br>
+                                        Il existe deux types de fichiers: un fichier compressé et un fichier non compressé.<br>
+                                        La version compressée a pour but de réduire le poids total de la librairie afin d’améliorer les performances du site web.
+                                        C’est la version généralement utilisée sur un site live.<br>
+                                        La version non compressée est une version lisible de la librairie (commentaires, indentation, etc.).<br>
+                                        A utiliser lors du développement du site web.
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Inclure jQuery via un CDN -->
+                    <!-- La documentation jQuery -->
                     <div class="mini_slide_container">
                         <h3>Inclure jQuery via un CDN</h3>
                         <button id="mini_slide_button"><i class="fas fa-chevron-right"></i></button>
                         <div class="content_container">
-                            <div id="mini_content_container">
-                                <div id="big_text_container">
-                                    <p>jQuery = bibliothèque JavaScript<br>
-                                        John Resig - 2006<br>
-                                        Bibliothèque front-end la plus utilisée au monde
+                            <div class="mini_content_container">
+                                <div class="big_text_container">
+                                    <p>Content Delivery Network<br>
+                                        2 avantages :<br>
+                                        - pas de stockage de fichers<br>
+                                        - optimisation des performances via la mise en cache du fichier<br>
                                     </p>
                                 </div>
-                                <div id="text_container">
-                                    <p>Une autre façon d’utiliser jQuery est de l’inclure depuis un CDN plutôt que de
-                                        télécharger et d’héberger les fichiers jQuery nous-mêmes.
-                                        Un CDN (Content Delivery Network ou réseau de distribution de contenu) correspond à un
-                                        ensemble de serveurs reliés et formant donc un réseau et dont le but est de fournir un
-                                        accès à du contenu très rapidement.
-                                        Utiliser un CDN plutôt que de télécharger et d’héberger soi-même ses fichiers possèdent
-                                        deux avantages notables : ne pas avoir à stocker les fichiers bien sûr mais également
-                                        optimiser les performances de votre site.
-                                        En effet, lorsqu’un visiteur cherche à accéder à une page de notre site, son navigateur
-                                        va télécharger les ressources nécessaires à l’affichage de la page. Plus une page va
-                                        avoir besoin de ressources pour fonctionner, plus son affichage va être lent.
-                                        Dans le cas où on inclut jQuery via un CDN, les fichiers jQuery proviennent d’une URL
-                                        commune (qui est celle du CDN) qui est potentiellement utilisée par de nombreux autres
-                                        sites.
-                                        Si un visiteur a visité par le passé un autre site utilisant le même CDN pour inclure le
-                                        même fichier, il est alors probable que le fichier soit toujours en cache dans son
-                                        navigateur et qu’il n’ait donc pas à le télécharger à nouveau, ce qui va faire que notre
-                                        page va s’afficher plus vite.
+                                <div class="text_container">
+                                    <p>Une autre façon d’inclure jQuery est depuis un CDN (Content Delivery Network).<br>
+                                        Utiliser un CDN plutôt que de télécharger et d’héberger les fichiers possèdent
+                                        deux avantages notables : ne pas avoir à stocker les fichiers et optimiser les performances du site web.<br>
+                                        Si on inclut jQuery via un CDN, les fichiers jQuery proviennent d’une URL commune.<br>
+                                        Si un visiteur a précedemment visité un autre site utilisant le même CDN pour inclure le
+                                        même fichier, alors le fichier est probablement en cache dans le navigateur.<br>
+                                        Il n'y a donc pas besoin de télécharger le fichier à nouveau, notre page va s’afficher plus vite.
                                     </p>
                                 </div>
                             </div>
@@ -257,20 +242,20 @@
             <!-- FONCTIONNEMENT SECTION -->
             <section class="fonctionnement_section">
                 <h2>Fonctionnement</h2>
-                <div id="slide_container">
+                <div class="slide_container">
                     <!-- La syntaxe -->
                     <div class="mini_slide_container">
                         <h3>La syntaxe</h3>
                         <button id="mini_slide_button"><i class="fas fa-chevron-right"></i></button>
                         <div class="content_container">
-                            <div id="mini_content_container">
-                                <div id="big_text_container">
+                            <div class="mini_content_container">
+                                <div class="big_text_container">
                                     <p>jQuery = bibliothèque JavaScript<br>
                                         John Resig - 2006<br>
                                         Bibliothèque front-end la plus utilisée au monde
                                     </p>
                                 </div>
-                                <div id="text_container">
+                                <div class="text_container">
                                     <p>Afin de pouvoir accéder aux différentes propriétés et méthodes de la librairie, on
                                         utilise les alias jQuery() ou $().
                                         Font exactement la même chose, sélectionner nos éléments HTML.
@@ -287,14 +272,14 @@
                         <h3>Inclure jQuery via un CDN</h3>
                         <button id="mini_slide_button"><i class="fas fa-chevron-right"></i></button>
                         <div class="content_container">
-                            <div id="mini_content_container">
-                                <div id="big_text_container">
+                            <div class="mini_content_container">
+                                <div class="big_text_container">
                                     <p>jQuery = bibliothèque JavaScript<br>
                                         John Resig - 2006<br>
                                         Bibliothèque front-end la plus utilisée au monde
                                     </p>
                                 </div>
-                                <div id="text_container">
+                                <div class="text_container">
                                     <p>Une autre façon d’utiliser jQuery est de l’inclure depuis un CDN plutôt que de
                                         télécharger et d’héberger les fichiers jQuery nous-mêmes.
                                         Un CDN (Content Delivery Network ou réseau de distribution de contenu) correspond à un
@@ -321,6 +306,15 @@
                 </div>
             </section>
             <!-- FONCTIONNEMENT SECTION END -->
+
+            <!-- LIVE CODING SECTION -->
+            <section class="live_coding_section">
+                <h2>Live coding</h2>
+                <div id="live_coding_container">
+
+                </div>
+            </section>
+            <!-- LIVE CODING SECTION END -->
             
         </div>
     </main>

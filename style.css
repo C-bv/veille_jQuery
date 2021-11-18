@@ -371,18 +371,18 @@ section h2:after {
 
     /* INTRODUCTION SECTION */
 
-    #mini_content_container{
+    .mini_content_container{
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
         align-items: center;
     }
 
-    #mini_content_container > div{
+    .mini_content_container > div{
         margin: 5px;
     }
 
-    #text_container, #big_text_container{
+    .text_container, .big_text_container{
         flex: 1 1 200px;
     }
 
@@ -410,18 +410,18 @@ section h2:after {
         display: none;
     }
     
-    #big_text_container{
+    .big_text_container{
         color: #2e64b3;
         font-size: 1.5em;
         font-weight: bold;
         line-height: 2;
     }
 
-    #text_container button:hover{
+    .text_container button:hover{
         transform: scale(1.2);
     }
 
-    #text_container p{
+    .text_container p{
         margin: 0px;
         text-align: justify;
     }
@@ -505,7 +505,15 @@ button.reset_demo i{
 /* DEMOS END */
 
 
+/* LIVE CODING */
 
+#live_coding_container{
+    height: 90%;
+    margin: 50px 50px 0px 50px;
+    border: 1px solid #e8dfec;
+}
+
+/* LIVE CODING END */
 
 
 
