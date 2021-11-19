@@ -14,12 +14,12 @@ function darkModeOff() {
 
 
 // Hide loader + show start button after load
-$(document).ready(function(){
+$(function(){
       setTimeout(function(){
             $(".loader").css("opacity","0");
             $(".start").css("opacity","1");
       },90); //9000
-});
+
 
 // Hide preloader + page_switcher_up
 $(".start").click(function(){
@@ -116,19 +116,22 @@ $(textButton).click(function(){
       if($(this).next().is(':hidden')){
             // Hide all content
             slideRemover()
+            resetArrow()
+            statusRemover()
             // Show content selected
             $(this).next().slideToggle();
-            $(this).css("color", "red");
-            $(this).css("transform", "rotate(90deg)");
+            $(this).css("color", "red").css("transform", "rotate(90deg)");
       }
       else if($(this).next().is(':visible')){
             $(this).next().slideToggle();
             $(this).removeAttr("style");
+            resetArrow()
+            statusRemover()
       }
 });
 
-// Remove all styles of content containers + open slide buttons
-let contentContainer = $(".content_container");
+// Remove all styles of content containers +  slide buttons
+const contentContainer = $(".content_container");
 const slideRemover = function() {
       $(contentContainer).slideUp();
       $(textButton).removeAttr("style");
@@ -148,13 +151,17 @@ const statusRemover = function() {
 const resetButton = $(".demo > button");
 const resetButtonIcon = $(".demo > button > i");
 
-$(resetButton).click(function(){
+const resetDemo = function() {
       $(resetButtonIcon).css("transform", "rotate(360deg)");
       $(".commands").find('*').removeAttr('style');
       $(".selecteur_container").find('*').removeAttr('style');
       setTimeout(function(){
             $(resetButtonIcon).removeAttr("style");
       },300);
+}
+
+$(resetButton).click(function(){
+      resetDemo();
 });
 
       // INTRODUCTION DEMO
@@ -168,9 +175,8 @@ $(resetButton).click(function(){
             // DO NOTHING
             }
             else{
-                  liste.css("color", "red");
-                  $(this).css("border" , "1px solid #2e64b3");
-                  $(this).css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
+                  $(liste).css("color", "red");
+                  $(this).css("border" , "1px solid #2e64b3").css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
             }
       });
 
@@ -180,9 +186,8 @@ $(resetButton).click(function(){
                   // DO NOTHING
             }
             else{
-                  liste.css("color", "red");
-                  $(this).css("border" , "1px solid #2e64b3");
-                  $(this).css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
+                  $(liste).css("color", "red");
+                  $(this).css("border" , "1px solid #2e64b3").css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
             }
       });
 
@@ -202,30 +207,26 @@ $(resetButton).click(function(){
       // Commande 1
       $(fonctionnementFirstCommand).click(function(){
             testClass.fadeOut();
-            $(this).css("border" , "1px solid #2e64b3");
-            $(this).css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
+            $(this).css("border" , "1px solid #2e64b3").css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
       });
 
       // Commande 2
       $(fonctionnementSecondCommand).click(function(){
             testId.fadeOut();
-            $(this).css("border" , "1px solid #2e64b3");
-            $(this).css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
+            $(this).css("border" , "1px solid #2e64b3").css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
       });
 
       // Commande 3
       $(fonctionnementThirdCommand).click(function(){
             testClassParagraphe.fadeOut();
             testIdParagraphe.fadeOut();
-            $(this).css("border" , "1px solid #2e64b3");
-            $(this).css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
+            $(this).css("border" , "1px solid #2e64b3").css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
       });
 
       // Commande 4
       $(fonctionnementFourthCommand).click(function(){
             testIdParagraphe.fadeOut();
-            $(this).css("border" , "1px solid #2e64b3");
-            $(this).css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
+            $(this).css("border" , "1px solid #2e64b3").css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
       });
 
       // FONCTIONNEMENT DEMO END
@@ -238,29 +239,31 @@ $(resetButton).click(function(){
 const textComposer = $(".text_composer");
 const arrow = $(".text_composer > i");
 const offset = arrow.offset();
+const resetArrow = function(){
+      $(".alias_text, .selecteur_text, .action, .action_text").removeAttr("style");
+      $(arrow).css("left", "25px").css("opacity","0");
+}
 $(textComposer).click(function(){
 
       if($(arrow).css("opacity") == "0"){
             $(arrow).css("opacity","1");
-            $(".alias_0, .alias_1, .alias_text").css("color", "red")
-            $(".alias_0, .alias_1").fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
+            $(".alias_text").css("color", "red")
+            $(".alias_0, .alias_1").fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
       }
       else if($(arrow).css("left") == "25px"){
             $(".alias_0, .alias_1, .alias_text").removeAttr("style");
             $(arrow).css("left", "84px");
-            $(".selecteur, .selecteur_text").css("color", "red")
-            $(".selecteur").fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
+            $(".selecteur_text").css("color", "red")
+            $(".selecteur").fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
       }
       else if($(arrow).css("left") == "84px"){
             $(".selecteur, .selecteur_text").removeAttr("style");
             $(arrow).css("left", "175px")
-            $(".action, .action_text").css("color", "red")
-            $(".action").fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
+            $(".action_text").css("color", "red")
+            $(".action").fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
       }
       else if($(arrow).css("left") == "175px"){
-            $(".action, .action_text").removeAttr("style");
-            $(arrow).css("left", "25px")
-            $(arrow).css("opacity","0");
+            resetArrow();
       }
 });   
 
@@ -272,3 +275,5 @@ $(textComposer).click(function(){
 const liveCodingContainer = $("#live_coding_container");
 
 // LIVE CODING END
+
+}); 

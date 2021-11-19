@@ -268,21 +268,47 @@
                                     <p>
                                         <span class="text_composer">
                                             <i class="fas fa-chevron-down"></i>
-                                            <span class="alias_0">$(</span>
-                                            <span class="selecteur">"section"</span>
-                                            <span class="alias_1">)</span>
-                                            <span class="action">.hide()</span>
+                                            <span class="alias_0"><span class="tagcolor_jQuery">$</span><span class="tagcolor">(</span></span>
+                                            <span class="selecteur"><span class="tagnamecolor">"section"</span></span>
+                                            <span class="alias_1"><span class="tagcolor">)</span></span>
+                                            <span class="action"><span class="tagcolor">.</span><span class="tagcolor_jQuery">hide</span><span class="tagcolor">()</span></span>
                                         </span><br>
                                         <span class="alias_text">Alias jQuery() ou $()</span><br>
                                         <span class="selecteur_text">Ciblage d'éléments via les sélecteurs css</span><br>
-                                        <span class="action_text">Appeler l'action à appliquer à l'élément</span>
+                                        <span class="action_text">Appeler la méthode à appliquer à l'élément</span>
                                     </p>
                                 </div>
                                 <div class="text_container">
                                     <p>Afin de pouvoir accéder aux différentes propriétés et méthodes de la librairie, on
                                         utilise les alias jQuery() ou $().<br>
-                                        Afin de cibler un élément HTML, il suffit de mentionner le sélecteur CSS associé 
-                                        à cet élément dans notre méthode $().
+                                        Ensuite, pour cibler un élément HTML, il suffit de mentionner le sélecteur CSS associé 
+                                        à cet élément dans notre méthode $().<br>
+                                        Enfin, on appelle la méthode à appliquer à l'élément ciblé.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Les sélecteurs -->
+                    <div class="mini_slide_container">
+                        <h3>Les sélecteurs</h3>
+                        <button id="mini_slide_button"><i class="fas fa-chevron-right"></i></button>
+                        <div class="content_container">
+                            <div class="mini_content_container">
+                                <div class="big_text_container">
+                                    <p>Sélecteur d'élement : <span class="tagnamecolor"><span class="tagcolor_jQuery">$</span><span class="tagcolor">(</span>"p"<span class="tagcolor">)</span></span><br>
+                                        Sélecteur de classe : <span class="tagnamecolor"><span class="tagcolor_jQuery">$</span><span class="tagcolor">(</span>".test"<span class="tagcolor">)</span></span><br>
+                                        Sélecteur d'ID : <span class="tagnamecolor"><span class="tagcolor_jQuery">$</span><span class="tagcolor">(</span>"#test"<span class="tagcolor">)</span></span>
+                                    </p>
+                                </div>
+                                <div class="text_container">
+                                    <p>Afin de cibler l'elément auquel on veut appliquer un action, on utilise
+                                        les sélecteurs CSS.<br>
+                                        Parmis les sélecteurs, on trouve :<br>
+                                        - Le sélecteur d'élement<br>
+                                        - Le sélecteur de classe<br>
+                                        - Le sélecteur d'ID<br>
+
                                     </p>
                                 </div>
                             </div>
@@ -317,37 +343,24 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Inclure jQuery via un CDN -->
+                    <!-- Les évènements-->
                     <div class="mini_slide_container">
-                        <h3>Inclure jQuery via un CDN</h3>
+                        <h3>Les évènements</h3>
                         <button id="mini_slide_button"><i class="fas fa-chevron-right"></i></button>
                         <div class="content_container">
                             <div class="mini_content_container">
                                 <div class="big_text_container">
-                                    <p>jQuery = bibliothèque JavaScript<br>
-                                        John Resig - 2006<br>
-                                        Bibliothèque front-end la plus utilisée au monde
+                                    <p>Série de méthodes pour la gestion d'évènements<br>
+                                        .click()<br>
+                                        .mouseenter()<br>
+                                        .mouseleave()
                                     </p>
                                 </div>
                                 <div class="text_container">
-                                    <p>Une autre façon d’utiliser jQuery est de l’inclure depuis un CDN plutôt que de
-                                        télécharger et d’héberger les fichiers jQuery nous-mêmes.
-                                        Un CDN (Content Delivery Network ou réseau de distribution de contenu) correspond à un
-                                        ensemble de serveurs reliés et formant donc un réseau et dont le but est de fournir un
-                                        accès à du contenu très rapidement.
-                                        Utiliser un CDN plutôt que de télécharger et d’héberger soi-même ses fichiers possèdent
-                                        deux avantages notables : ne pas avoir à stocker les fichiers bien sûr mais également
-                                        optimiser les performances de votre site.
-                                        En effet, lorsqu’un visiteur cherche à accéder à une page de notre site, son navigateur
-                                        va télécharger les ressources nécessaires à l’affichage de la page. Plus une page va
-                                        avoir besoin de ressources pour fonctionner, plus son affichage va être lent.
-                                        Dans le cas où on inclut jQuery via un CDN, les fichiers jQuery proviennent d’une URL
-                                        commune (qui est celle du CDN) qui est potentiellement utilisée par de nombreux autres
-                                        sites.
-                                        Si un visiteur a visité par le passé un autre site utilisant le même CDN pour inclure le
-                                        même fichier, il est alors probable que le fichier soit toujours en cache dans son
-                                        navigateur et qu’il n’ait donc pas à le télécharger à nouveau, ce qui va faire que notre
-                                        page va s’afficher plus vite.
+                                    <p>Avec jQuery, la gestion d'évènements est simplifiée grâce à une série de méthodes.<br>
+                                        Généralement, ces méthodes portent le nom de l'évènement auquel elles réagissent.<br>
+                                        Par exemple : click(), mouseenter(), mouseleave(), ...
+                                        Similaire au addEventListener() en JavaScript Vanilla.
                                     </p>
                                 </div>
                             </div>
