@@ -137,90 +137,130 @@ const slideRemover = function() {
 
 // DEMO
 
-// Introduction demo
-let liste = $("#ol_container > ol");
-
-// Commande Javascript + border if clicked
-let firstCommand = $(".first_command");
-$(firstCommand).click(function(){
-      if($(firstCommand).attr("style") || $(secondCommand).attr("style")){
-           // DO NOTHING
-      }
-      else{
-            document.querySelector('ol').style.color = "red";
-            $(this).css("border" , "1px solid #2e64b3");
-            $(this).css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
-      }
-});
-
-// Commande jQuery + border if clicked
-let secondCommand = $(".second_command");
-$(secondCommand).click(function(){
-      if($(firstCommand).attr("style") || $(secondCommand).attr("style")){
-            // DO NOTHING
-      }
-      else{
-            document.querySelector('ol').style.color = "red";
-            $(this).css("border" , "1px solid #2e64b3");
-            $(this).css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
-      }
-});
-
-// Reset button
-let resetButton = $(".demo > button");
-$(resetButton).click(function(){
-      $(liste).removeAttr('style');
-});
-
-//Reset button icon flip on click + reset after timing
-let resetButtonIcon = $("button > i");
-$(resetButton).click(function(){
-      if($(firstCommand).attr("style") || $(secondCommand).attr("style")){
-            $(resetButtonIcon).css("transform", "rotate(360deg)");
-            $(firstCommand).removeAttr('style');
-            $(secondCommand).removeAttr('style');
-            setTimeout(function(){
-                  $(resetButtonIcon).removeAttr("style");
-            },300);
-      }
-});
-
 // Remove all styles of div demo
-let demoDiv = $(".demo");
+const demoDiv = $(".demo");
 const statusRemover = function() {
       $(demoDiv).find('*').removeAttr('style');
 }
 
+
+// Reset button
+const resetButton = $(".demo > button");
+const resetButtonIcon = $(".demo > button > i");
+
+$(resetButton).click(function(){
+      $(resetButtonIcon).css("transform", "rotate(360deg)");
+      $(".commands").find('*').removeAttr('style');
+      $(".selecteur_container").find('*').removeAttr('style');
+      setTimeout(function(){
+            $(resetButtonIcon).removeAttr("style");
+      },300);
+});
+
+      // INTRODUCTION DEMO
+      const liste = $(".selecteur_container > ol");
+      const introFirstCommand = $(".first_command");
+      const introSecondCommand = $(".second_command");
+
+      // Commande 1
+      $(introFirstCommand).click(function(){
+            if($(this).siblings().attr("style")){
+            // DO NOTHING
+            }
+            else{
+                  liste.css("color", "red");
+                  $(this).css("border" , "1px solid #2e64b3");
+                  $(this).css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
+            }
+      });
+
+      // Commande 2
+      $(introSecondCommand).click(function(){
+            if($(this).siblings().attr("style")){
+                  // DO NOTHING
+            }
+            else{
+                  liste.css("color", "red");
+                  $(this).css("border" , "1px solid #2e64b3");
+                  $(this).css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
+            }
+      });
+
+      // INTRODUCTION DEMO END
+
+      // FONCTIONNEMENT DEMO
+      const testClass = $(".selecteur_container > .test");
+      const testId = $(".selecteur_container > #test");
+      const testClassParagraphe = $(".selecteur_container > .test > p");
+      const testIdParagraphe = $(".selecteur_container > #test > p");
+
+      const fonctionnementFirstCommand = $(".first_command");
+      const fonctionnementSecondCommand = $(".second_command");
+      const fonctionnementThirdCommand = $(".third_command");
+      const fonctionnementFourthCommand = $(".fourth_command");
+
+      // Commande 1
+      $(fonctionnementFirstCommand).click(function(){
+            testClass.fadeOut();
+            $(this).css("border" , "1px solid #2e64b3");
+            $(this).css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
+      });
+
+      // Commande 2
+      $(fonctionnementSecondCommand).click(function(){
+            testId.fadeOut();
+            $(this).css("border" , "1px solid #2e64b3");
+            $(this).css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
+      });
+
+      // Commande 3
+      $(fonctionnementThirdCommand).click(function(){
+            testClassParagraphe.fadeOut();
+            testIdParagraphe.fadeOut();
+            $(this).css("border" , "1px solid #2e64b3");
+            $(this).css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
+      });
+
+      // Commande 4
+      $(fonctionnementFourthCommand).click(function(){
+            testIdParagraphe.fadeOut();
+            $(this).css("border" , "1px solid #2e64b3");
+            $(this).css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
+      });
+
+      // FONCTIONNEMENT DEMO END
+
 // DEMO END
+
 
 // TEXT COMPOSER
 
 const textComposer = $(".text_composer");
 const arrow = $(".text_composer > i");
-let offset = arrow.offset();
+const offset = arrow.offset();
 $(textComposer).click(function(){
 
-      if($(arrow).is(':hidden')){
-            $(arrow).fadeIn();
-            $("#alias_0, #alias_1").css("color", "red")
-            $("#alias_0, #alias_1").fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
+      if($(arrow).css("opacity") == "0"){
+            $(arrow).css("opacity","1");
+            $(".alias_0, .alias_1, .alias_text").css("color", "red")
+            $(".alias_0, .alias_1").fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
       }
       else if($(arrow).css("left") == "25px"){
-            $("#alias_0, #alias_1").removeAttr("style");
+            $(".alias_0, .alias_1, .alias_text").removeAttr("style");
             $(arrow).css("left", "84px");
-            $("#selecteur").css("color", "red")
-            $("#selecteur").fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
+            $(".selecteur, .selecteur_text").css("color", "red")
+            $(".selecteur").fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
       }
       else if($(arrow).css("left") == "84px"){
-            $("#selecteur").removeAttr("style");
-            $(arrow).css("left", "169px")
-            $("#action").css("color", "red")
-            $("#action").fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
+            $(".selecteur, .selecteur_text").removeAttr("style");
+            $(arrow).css("left", "175px")
+            $(".action, .action_text").css("color", "red")
+            $(".action").fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
       }
-      else if($(arrow).css("left") == "169px"){
-            $("#action").removeAttr("style");
+      else if($(arrow).css("left") == "175px"){
+            $(".action, .action_text").removeAttr("style");
             $(arrow).css("left", "25px")
-            $(arrow).fadeOut();
+            $(arrow).css("opacity","0");
       }
 });   
 
