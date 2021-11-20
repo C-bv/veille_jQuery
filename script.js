@@ -193,43 +193,78 @@ $(resetButton).click(function(){
 
       // INTRODUCTION DEMO END
 
-      // FONCTIONNEMENT DEMO
+      // SELECTEUR DEMO
       const testClass = $(".selecteur_container > .test");
       const testId = $(".selecteur_container > #test");
       const testClassParagraphe = $(".selecteur_container > .test > p");
       const testIdParagraphe = $(".selecteur_container > #test > p");
 
-      const fonctionnementFirstCommand = $(".first_command");
-      const fonctionnementSecondCommand = $(".second_command");
-      const fonctionnementThirdCommand = $(".third_command");
-      const fonctionnementFourthCommand = $(".fourth_command");
+      const selecteurFirstCommand = $(".first_command");
+      const selecteurSecondCommand = $(".second_command");
+      const selecteurThirdCommand = $(".third_command");
+      const selecteurFourthCommand = $(".fourth_command");
 
       // Commande 1
-      $(fonctionnementFirstCommand).click(function(){
+      $(selecteurFirstCommand).click(function(){
             testClass.fadeOut();
             $(this).css("border" , "1px solid #2e64b3").css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
       });
 
       // Commande 2
-      $(fonctionnementSecondCommand).click(function(){
+      $(selecteurSecondCommand).click(function(){
             testId.fadeOut();
             $(this).css("border" , "1px solid #2e64b3").css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
       });
 
       // Commande 3
-      $(fonctionnementThirdCommand).click(function(){
+      $(selecteurThirdCommand).click(function(){
             testClassParagraphe.fadeOut();
             testIdParagraphe.fadeOut();
             $(this).css("border" , "1px solid #2e64b3").css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
       });
 
       // Commande 4
-      $(fonctionnementFourthCommand).click(function(){
+      $(selecteurFourthCommand).click(function(){
             testIdParagraphe.fadeOut();
             $(this).css("border" , "1px solid #2e64b3").css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
       });
 
-      // FONCTIONNEMENT DEMO END
+      // SELECTEUR DEMO END
+
+            // SELECTEUR DEMO
+            const  selecteurTextContainerP = $("#selecteur_text_container > p");
+            const  selecteurTextContainerTitle = $("#selecteur_text_container > h4");
+      
+            const domFirstCommand = $(".first_command");
+            const domSecondCommand = $(".second_command");
+            const domThirdCommand = $(".third_command");
+            const domFourthCommand = $(".fourth_command");
+      
+            // Commande 1
+            $(domFirstCommand).click(function(){
+                  $(selecteurTextContainerP).not(":last").css("border" , "1px solid black")
+                  $(this).css("border" , "1px solid #2e64b3").css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
+            });
+      
+            // Commande 2
+            $(domSecondCommand).click(function(){
+                  $(selecteurTextContainerTitle).css("color","red");
+                  $(this).css("border" , "1px solid #2e64b3").css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
+            });
+      
+            // Commande 3
+            $(domThirdCommand).click(function(){
+                  $(selecteurTextContainerP).not(":first").css("color","red");
+                  $(this).css("border" , "1px solid #2e64b3").css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
+            });
+      
+            // Commande 4
+            $(domFourthCommand).click(function(){
+                  $(selecteurTextContainerP).eq(1).css("color","red");
+                  $(this).css("border" , "1px solid #2e64b3").css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
+            });
+      
+            // SELECTEUR DEMO END
 
 // DEMO END
 
@@ -247,19 +282,21 @@ $(textComposer).click(function(){
 
       if($(arrow).css("opacity") == "0"){
             $(arrow).css("opacity","1");
-            $(".alias_text").css("color", "red")
+            $(".alias_text").css("color", "red");
+            $(".alias_text").children().css("color", "red");
             $(".alias_0, .alias_1").fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
       }
       else if($(arrow).css("left") == "25px"){
             $(".alias_0, .alias_1, .alias_text").removeAttr("style");
+            $(".alias_text").children().removeAttr("style");
             $(arrow).css("left", "84px");
-            $(".selecteur_text").css("color", "red")
+            $(".selecteur_text").css("color", "red");
             $(".selecteur").fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
       }
       else if($(arrow).css("left") == "84px"){
             $(".selecteur, .selecteur_text").removeAttr("style");
-            $(arrow).css("left", "175px")
-            $(".action_text").css("color", "red")
+            $(arrow).css("left", "175px");
+            $(".action_text").css("color", "red");
             $(".action").fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
       }
       else if($(arrow).css("left") == "175px"){
