@@ -37,7 +37,6 @@
                     <li><a href="#">Introduction</a></li>
                     <li><a href="#">Prérequis</a></li>
                     <li><a href="#">Fonctionnement</a></li>
-                    <li><a href="#">Live coding</a></li>
                 </ul>
             </div>
             </div>
@@ -142,9 +141,6 @@
                             <div class="mini_content_container">
                                 <div class="big_text_container">
                                     <p>Pas une alternative au JavaScript<br>
-                                        <br>
-                                        <br>
-                                        <br>
                                         Syntaxe plus simple que JavaScript
                                     </p>
                                 </div>
@@ -461,18 +457,14 @@
                                 </div>
                                 <div class="commands">
                                     <div class="first_command">
-                                        <!-- alert("Text : "+ ($("#p1").text()); -->
-                                        <span class="tagnamecolor"><span class="tagcolor_jQuery">alert</span><span class="tagcolor">(</span>"Text : "<span class="tagcolor">+ <span class="tagcolor_jQuery">$</span>(</span>"#p1"<span class="tagcolor">).<span class="tagcolor_jQuery">text</span>());</span></span><br>
+                                        <!-- $("#p1").remove(); -->
+                                        <span class="tagnamecolor"><span class="tagcolor_jQuery">$</span><span class="tagcolor">(</span>"#p1"<span class="tagcolor">).<span class="tagcolor_jQuery">remove</span>();</span></span>
                                     </div>
                                     <div class="second_command">
                                         <!-- $("#p2").append("  Texte ajouté"); -->
                                         <span class="tagnamecolor"><span class="tagcolor_jQuery">$</span><span class="tagcolor">(</span>"#p2"<span class="tagcolor">).<span class="tagcolor_jQuery">append</span>(</span>"  Texte ajouté"<span class="tagcolor">);</span></span><br>
+                                    </div>
 
-                                    </div>
-                                    <div class="third_command">
-                                        <!-- $("#p1").remove(); -->
-                                        <span class="tagnamecolor"><span class="tagcolor_jQuery">$</span><span class="tagcolor">(</span>"#p1"<span class="tagcolor">).<span class="tagcolor_jQuery">remove</span>();</span></span><br>
-                                    </div>
                                 </div>
                                 <button class="reset_demo"><i class="fas fa-undo"></i></button>
                             </div>
@@ -546,16 +538,61 @@
                         <div class="content_container">
                             <div class="mini_content_container">
                                 <div class="big_text_container">
-                                    <p>Série de méthodes pour la gestion d'évènements<br>
-                                        <span class="tagcolor">.</span><span class="tagcolor_jQuery">click</span><span class="tagcolor">()</span><br>
-                                        <span class="tagcolor">.</span><span class="tagcolor_jQuery">mouseenter</span><span class="tagcolor">()</span><br>
-                                        <span class="tagcolor">.</span><span class="tagcolor_jQuery">mouseleave</span><span class="tagcolor">()</span>
+                                    <p>Série de méthodes permettant de créer des effets et dans animations<br>
+                                        <span class="tagcolor">.</span><span class="tagcolor_jQuery">hide</span><span class="tagcolor">()</span><br>
+                                        <span class="tagcolor">.</span><span class="tagcolor_jQuery">fadetoogle</span><span class="tagcolor">()</span><br>
+                                        <span class="tagcolor">.</span><span class="tagcolor_jQuery">slidetoogle</span><span class="tagcolor">()</span>
                                     </p>
                                 </div>
                                 <div class="text_container">
-                                    <p>La librairie jQuery
+                                    <p>La librairie jQuery fournie une série de méthodes qui vont nous permettre de créer des effets et des animations, souvent en modifiant dynamiquement les styles CSS des éléments HTML ciblés.
                                     </p>
                                 </div>
+                            </div>
+                            <div class="demo">
+                                <div class="selecteur_container">
+                                    <div class="html_text">
+                                        <span class="tagnamecolor"><span class="tagcolor">&lt;<span class="attributevaluecolor">body</span>&gt;</span><br> 
+                                        &emsp;&emsp;<span class="tagnamecolor"><span class="tagcolor">&lt;<span class="attributevaluecolor">h1</span>&gt;</span>Veille jQuery<span class="tagcolor">&lt;/<span class="attributevaluecolor">h1</span>&gt;</span></span><br>
+                                        &emsp;&emsp;<span class="tagnamecolor"><span class="tagcolor">&lt;<span class="attributevaluecolor">ul</span>&gt;</span></span><br>
+                                        &emsp;&emsp;&emsp;&emsp;<span class="tagnamecolor"><span class="tagcolor">&lt;<span class="attributevaluecolor">li</span>&gt;</span></span><li>Premier</li><span class="tagnamecolor"><span class="tagcolor">&lt;/<span class="attributevaluecolor">li</span>&gt;</span></span><br>
+                                        &emsp;&emsp;&emsp;&emsp;<span class="tagnamecolor"><span class="tagcolor">&lt;<span class="attributevaluecolor">li</span>&gt;</span></span><li>Deuxième</li><span class="tagnamecolor"><span class="tagcolor">&lt;/<span class="attributevaluecolor">li</span>&gt;</span></span><br>
+                                        &emsp;&emsp;&emsp;&emsp;<span class="tagnamecolor"><span class="tagcolor">&lt;<span class="attributevaluecolor">li</span>&gt;</span></span><li>Troisième</li><span class="tagnamecolor"><span class="tagcolor">&lt;/<span class="attributevaluecolor">li</span>&gt;</span></span><br>
+                                        &emsp;&emsp;&emsp;&emsp;<span class="tagnamecolor"><span class="tagcolor">&lt;<span class="attributevaluecolor">li</span>&gt;</span></span><li>Quatrième</li><span class="tagnamecolor"><span class="tagcolor">&lt;/<span class="attributevaluecolor">li</span>&gt;</span></span><br>
+                                        &emsp;&emsp;<span class="tagnamecolor"><span class="tagcolor">&lt;/<span class="attributevaluecolor">ul</span>&gt;</span></span><br>
+                                        <span class="tagnamecolor"><span class="tagcolor">&lt;/<span class="attributevaluecolor">body</span>&gt;</span></span>
+                                    </div>
+                                </div>
+                                <div class="selecteur_container">
+                                    <div class="selecteur_text_container">
+                                        <h4>Veille jQuery</h4>
+                                        <ul>
+                                            <li>Premier</li>
+                                            <li>Deuxième</li>
+                                            <li>Troisième</li>
+                                            <li>Quatrième</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="commands">
+                                    <div class="first_command">
+                                        <!--  -->
+                                        <span class="tagnamecolor"><span class="tagcolor_jQuery">$</span><span class="tagcolor">(</span>"ul"<span class="tagcolor">).<span class="tagcolor_jQuery">slideToggle</span>();</span></span><br>
+                                    </div>
+                                    <div class="second_command">
+                                        <!--  -->
+                                        <span class="tagnamecolor"><span class="tagcolor_jQuery">$</span><span class="tagcolor">(</span>"ul"<span class="tagcolor">).<span class="tagcolor_jQuery">fadeToggle</span>();</span></span><br>
+                                    </div>
+                                    <div class="third_command">
+                                        <!--  -->
+                                        <span class="tagnamecolor"><span class="tagcolor_jQuery">$</span><span class="tagcolor">(</span>"ul"<span class="tagcolor">).<span class="tagcolor_jQuery">hide</span>();</span></span><br>
+                                    </div>
+                                    <div class="fourth_command">
+                                        <!--  -->
+                                        <span class="tagnamecolor"><span class="tagcolor_jQuery">$</span><span class="tagcolor">(</span>"ul"<span class="tagcolor">).<span class="tagcolor_jQuery">show</span>();</span></span><br>
+                                    </div>
+                                </div>
+                                <button class="reset_demo"><i class="fas fa-undo"></i></button>
                             </div>
                         </div>
                     </div>

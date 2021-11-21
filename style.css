@@ -25,7 +25,7 @@ body {
 /* PRELOADER */
 
 .preloader{
-	background-color: #FFF;
+	background-color: #e9e9e9;
 	position: fixed;
 	left:0;
 	top:0;
@@ -91,7 +91,7 @@ body {
     height: 100%;
     border-radius: 10px;
     background-color: #2e64b3;
-    animation: load 10s linear ;
+    animation: load 4s linear ;
 }
 
 @keyframes load {
@@ -145,8 +145,8 @@ body {
 
 aside {
     width: 270px;
-    background-color: #FFF;
-    border-right: 1px solid #e8dfec;
+    background-color: #e9e9e9;
+    border-right: 1px solid #a9a9a9;
     position: fixed;
     height: 100%;
     left: -270px;
@@ -164,7 +164,7 @@ aside .nav_toggler {
     display: flex;
     height: 40px;
     width: 45px;
-    border: 1px solid #e8dfec;
+    border: 1px solid #a9a9a9;
     cursor: pointer;
     position: fixed;
     left: 30px;
@@ -214,7 +214,7 @@ aside .nav li a {
     text-decoration: none;
     line-height: 45px;
     display: block;
-    border-bottom: 1px solid #e8dfec;
+    border-bottom: 1px solid #a9a9a9;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
     text-transform: capitalize;
@@ -245,7 +245,7 @@ aside .nav li a.active{
     background: #fff;
     right: 30px;
     bottom: 70px;
-    border: 1px solid #e8dfec;
+    border: 1px solid #a9a9a9;
     text-align: center;
     cursor: pointer;
     border-radius: 5px;
@@ -265,7 +265,7 @@ aside .nav li a.active{
     background: #fff;
     right: 30px;
     bottom: 20px;
-    border: 1px solid #e8dfec;
+    border: 1px solid #a9a9a9;
     text-align: center;
     cursor: pointer;
     border-radius: 5px;
@@ -282,7 +282,7 @@ aside .nav li a.active{
 
 section {
     position: fixed;
-    background-color: #FFF;
+    background-color: #e9e9e9;
     height: 100vh;
     padding: 70px 30px;
     left: 0;
@@ -451,7 +451,15 @@ section h2:after {
     .syntax_p{
         margin-block-start: 0em;
     }
-      
+    
+    .selecteur_text_container {
+        height: -webkit-fill-available;
+
+    }
+
+    .html_text li{
+        display: inline;
+    }
     /* FONCTIONNEMENT SECTION END */
 
 
@@ -479,7 +487,7 @@ section h2:after {
 }
 
 .selecteur_container{
-    border: 1px solid #e8dfec;
+    border: 1px solid #a9a9a9;
     border-radius: 5px;
     background-color: #FFF;
     min-width: 330px;
@@ -495,7 +503,7 @@ section h2:after {
     width: 300px;
     position: relative;
     transition: all 1.5s ease;
-    bottom: 0;
+    bottom: -75px;
 }
 
 .commands{
@@ -507,7 +515,7 @@ section h2:after {
 
 button.reset_demo{
     cursor: pointer;
-    border: 1px solid #e8dfec;
+    border: 1px solid #a9a9a9;
     border-radius: 5px;
     color: #2e64b3;
     background:none;  
@@ -515,6 +523,7 @@ button.reset_demo{
     font-size: 1.4em;
     padding: 5px 8px;
     transition: all 0.3s ease;
+    background-color: #fff;
 }
 
 button.reset_demo:hover{
@@ -535,7 +544,7 @@ button.reset_demo i{
     cursor: pointer;
     padding: 5px;
     background-color: #fff;
-    border: 1px solid #e8dfec;
+    border: 1px solid #a9a9a9;
     border-radius: 5px;
     transition: all 0.3s ease;
 
@@ -551,7 +560,7 @@ button.reset_demo i{
 .code_container{
     padding: 5px;
     background-color: #fff;
-    border: 1px solid #e8dfec;
+    border: 1px solid #a9a9a9;
     border-radius: 5px;
     line-height: 1.8;
     font-size: 1.2em;
@@ -592,7 +601,7 @@ button.reset_demo i{
 #live_coding_container{
     height: 90%;
     margin: 50px 50px 0px 50px;
-    border: 1px solid #e8dfec;
+    border: 1px solid #a9a9a9;
 }
 
 /* LIVE CODING END */

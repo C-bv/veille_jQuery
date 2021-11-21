@@ -1,11 +1,13 @@
 /* DARK MODE */
 
-body.dark{
+body.dark, body.dark section h2{
     color: #FFF;
 }
 
 body.dark section, body.dark aside{
     background: #262626;
 }
+
+
 
 /* DARK MODE END*/
