@@ -211,7 +211,7 @@
                             <div class="demo">
                                 <div class="code_container">
                                     <span class="tagnamecolor"><span class="tagcolor">&lt;</span>head<span class="tagcolor">&gt;</span></span><br>
-                                    <span class="tagnamecolor"><span class="tagcolor">&lt;</span>script<span class="attributecolor"> src<span class="attributevaluecolor">="jquery-3.6.0.min.js"</span></span><span class="tagcolor">&gt;</span></span><span class="jscolor"></span><span class="tagnamecolor"><span class="tagcolor">&lt;</span>/script<span class="tagcolor">&gt;</span></span><br>
+                                    &emsp; &emsp;<span class="tagnamecolor"><span class="tagcolor">&lt;</span>script<span class="attributecolor"> src<span class="attributevaluecolor">="jquery-3.6.0.min.js"</span></span><span class="tagcolor">&gt;</span></span><span class="jscolor"></span><span class="tagnamecolor"><span class="tagcolor">&lt;</span>/script<span class="tagcolor">&gt;</span></span><br>
                                     <span class="tagnamecolor"><span class="tagcolor">&lt;</span>/head<span class="tagcolor">&gt;</span></span>
                                 </div>
                             </div>
@@ -226,7 +226,7 @@
                                 <div class="big_text_container">
                                     <p>Content Delivery Network<br>
                                         2 avantages :<br>
-                                        - pas de stockage de fichers<br>
+                                        - pas de stockage de fichiers<br>
                                         - optimisation des performances via la mise en cache du fichier<br>
                                     </p>
                                 </div>
@@ -244,12 +244,27 @@
                             <div class="demo">
                                 <div class="code_container">
                                     <span class="tagnamecolor"><span class="tagcolor">&lt;</span>head<span class="tagcolor">&gt;</span></span><br>
-                                    <span class="tagnamecolor"><span class="tagcolor">&lt;</span>script<span class="attributecolor"> src<span class="attributevaluecolor">="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"</span></span><span class="tagcolor">&gt;</span></span><span class="jscolor"></span><span class="tagnamecolor"><span class="tagcolor">&lt;</span>/script<span class="tagcolor">&gt;</span></span><br>
+                                    &emsp; &emsp;<span class="tagnamecolor"><span class="tagcolor">&lt;</span>script<span class="attributecolor"> src<span class="attributevaluecolor">="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"</span></span><span class="tagcolor">&gt;</span></span><span class="jscolor"></span><span class="tagnamecolor"><span class="tagcolor">&lt;</span>/script<span class="tagcolor">&gt;</span></span><br>
                                     <span class="tagnamecolor"><span class="tagcolor">&lt;</span>/head<span class="tagcolor">&gt;</span></span>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- Utiliser la documentation -->
+                    <!-- <div class="mini_slide_container">
+                        <h3>Utiliser la documentation</h3>
+                        <button id="mini_slide_button"><i class="fas fa-chevron-right"></i></button>
+                        <div class="content_container">
+                            <div class="mini_content_container">
+                                <div class="big_text_container">
+                                    <p>Documentation en ligne àutilzaeroizehozihzogh</p>
+                                </div>
+                                <div class="text_container">
+                                    <a href="https://api.jquery.com/" target="_blank">jQuery Documentation</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
                 </div>
             </section>
             <!-- PREREQUIS SECTION END -->
@@ -273,7 +288,7 @@
                                             <span class="alias_1"><span class="tagcolor">)</span></span>
                                             <span class="action"><span class="tagcolor">.<span class="tagcolor_jQuery">hide</span>()</span></span>
                                         </span><br>
-                                        <span class="alias_text">Alias <span class="tagcolor_jQuery">jQuery</span><span class="tagcolor">()</span> ou <span class="tagcolor_jQuery">$</span><span class="tagcolor">();</span></span><br>
+                                        <span class="alias_text">Alias <span class="tagcolor_jQuery">jQuery</span><span class="tagcolor">()</span> ou <span class="tagcolor_jQuery">$</span><span class="tagcolor">()</span></span><br>
                                         <span class="selecteur_text">Ciblage d'éléments via les sélecteurs css</span><br>
                                         <span class="action_text">Appeler la méthode à appliquer à l'élément</span>
                                     </p>
@@ -350,9 +365,9 @@
                             <div class="mini_content_container">
                                 <div class="big_text_container">
                                     <p>Série de méthodes pour parcourir le DOM<br>
-                                        <span class="tagcolor">.<span class="tagcolor_jQuery">click</span>()</span><br>
-                                        <span class="tagcolor">.<span class="tagcolor_jQuery">mouseenter</span>()</span><br>
-                                        <span class="tagcolor">.<span class="tagcolor_jQuery">mouseleave</span>()</span><br>
+                                        Eléments parents : <span class="tagcolor">.<span class="tagcolor_jQuery">parent</span>()</span><br>
+                                        Eléments descendants : <span class="tagcolor">.<span class="tagcolor_jQuery">children</span>()</span><br>
+                                        Eléments frères : <span class="tagcolor">.<span class="tagcolor_jQuery">siblings</span>()</span><br>
                                     </p>
                                 </div>
                                 <div class="text_container">
@@ -376,7 +391,7 @@
                                     </div>
                                 </div>
                                 <div class="selecteur_container">
-                                    <div id="selecteur_text_container">
+                                    <div class="selecteur_text_container">
                                         <h4>Veille jQuery</h4>
                                         <p>Paragraphe ID #p1</p>
                                         <p>Paragraphe ID #p2</p>
@@ -406,6 +421,63 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Agir sur le HTML -->
+                    <div class="mini_slide_container">
+                        <h3>Agir sur le HTML</h3>
+                        <button id="mini_slide_button"><i class="fas fa-chevron-right"></i></button>
+                        <div class="content_container">
+                            <div class="mini_content_container">
+                                <div class="big_text_container">
+                                    <p>Accéder et modifier des éléments et des attributs<br>
+                                        Ajouter ou supprimer du contenu<br>
+                                        Ajouter ou supprimer des classes CSS<br>
+                                    </p>
+                                </div>
+                                <div class="text_container">
+                                    <p>La librairie jQuery comprend de nombreuses méthodes permettant l'accès et la modification des éléments et des attributs
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="demo">
+                                <div class="selecteur_container">
+                                    <div class="html_text">
+                                        <span class="tagnamecolor"><span class="tagcolor">&lt;<span class="attributevaluecolor">body</span>&gt;</span><br> 
+                                        &emsp;&emsp;<span class="tagnamecolor"><span class="tagcolor">&lt;<span class="attributevaluecolor">h1</span>&gt;</span>Veille jQuery<span class="tagcolor">&lt;/<span class="attributevaluecolor">h1</span>&gt;</span></span><br>
+                                        &emsp;&emsp;<span class="tagnamecolor"><span class="tagcolor">&lt;<span class="attributevaluecolor">div class</span>="</span>container<span class="tagcolor">"&gt;</span></span><br>
+                                        &emsp;&emsp;&emsp;&emsp;<span class="tagnamecolor"><span class="tagcolor">&lt;<span class="attributevaluecolor">p id</span>="</span>p1<span class="tagcolor">"&gt;</span>Paragraphe ID #p1<span class="tagcolor">&lt;/<span class="attributevaluecolor">p</span>&gt;</span></span><br>
+                                        &emsp;&emsp;&emsp;&emsp;<span class="tagnamecolor"><span class="tagcolor">&lt;<span class="attributevaluecolor">p id</span>="</span>p2<span class="tagcolor">"&gt;</span>Paragraphe ID #p2<span class="tagcolor">&lt;/<span class="attributevaluecolor">p</span>&gt;</span></span><br>
+                                        &emsp;&emsp;<span class="tagnamecolor"><span class="tagcolor">&lt;/<span class="attributevaluecolor">div</span>&gt;</span></span><br>
+                                        &emsp;&emsp;<span class="tagnamecolor"><span class="tagcolor">&lt;<span class="attributevaluecolor">p</span>&gt;</span>Paragraphe en dehors du div<span class="tagcolor">&lt;/<span class="attributevaluecolor">p</span>&gt;</span></span><br>
+                                        <span class="tagnamecolor"><span class="tagcolor">&lt;/<span class="attributevaluecolor">body</span>&gt;</span></span>
+                                    </div>
+                                </div>
+                                <div class="selecteur_container">
+                                    <div class="selecteur_text_container">
+                                        <h4>Veille jQuery</h4>
+                                        <p>Paragraphe ID #p1</p>
+                                        <p>Paragraphe ID #p2</p>
+                                        <p>Paragraphe en dehors du div</p>
+                                    </div>
+                                </div>
+                                <div class="commands">
+                                    <div class="first_command">
+                                        <!-- alert("Text : "+ ($("#p1").text()); -->
+                                        <span class="tagnamecolor"><span class="tagcolor_jQuery">alert</span><span class="tagcolor">(</span>"Text : "<span class="tagcolor">+ <span class="tagcolor_jQuery">$</span>(</span>"#p1"<span class="tagcolor">).<span class="tagcolor_jQuery">text</span>());</span></span><br>
+                                    </div>
+                                    <div class="second_command">
+                                        <!-- $("#p2").append("  Texte ajouté"); -->
+                                        <span class="tagnamecolor"><span class="tagcolor_jQuery">$</span><span class="tagcolor">(</span>"#p2"<span class="tagcolor">).<span class="tagcolor_jQuery">append</span>(</span>"  Texte ajouté"<span class="tagcolor">);</span></span><br>
+
+                                    </div>
+                                    <div class="third_command">
+                                        <!-- $("#p1").remove(); -->
+                                        <span class="tagnamecolor"><span class="tagcolor_jQuery">$</span><span class="tagcolor">(</span>"#p1"<span class="tagcolor">).<span class="tagcolor_jQuery">remove</span>();</span></span><br>
+                                    </div>
+                                </div>
+                                <button class="reset_demo"><i class="fas fa-undo"></i></button>
+                            </div>
+                        </div>
+                    </div>
                     <!-- Les évènements-->
                     <div class="mini_slide_container">
                         <h3>Les évènements</h3>
@@ -427,6 +499,44 @@
                                     </p>
                                 </div>
                             </div>
+                            <div class="demo">
+                                <div class="selecteur_container">
+                                    <div class="selecteur_text_container">
+                                        <img src="/img/logo.svg" alt="Logo">
+                                    </div>
+                                </div>
+                                <div class="commands">
+                                    <div class="first_command">
+                                        <!-- $("img").click(function(){
+                                                $(this).animate({
+                                                    width:"-=75px"
+                                                });
+                                            }); -->
+                                        <span class="tagnamecolor"><span class="tagcolor_jQuery">$</span><span class="tagcolor">(</span>"img"<span class="tagcolor">).<span class="tagcolor_jQuery">click</span>(<span class="attributevaluecolor">function</span>(){<br>
+                                            &emsp;&emsp;<span class="tagcolor_jQuery">$</span>(<span class="attributevaluecolor">this</span>).<span class="tagcolor_jQuery">animate</span>({<br>
+                                                &emsp;&emsp;&emsp;&emsp;</span><span class="attributevaluecolor">width:</span>"-=75px"<br>
+                                                &emsp;&emsp;<span class="tagcolor">});<br>
+                                                });</span></span>
+                                    </div>
+                                    <div class="second_command">
+                                        <!-- $("img").mouseenter(function(){
+                                                $(this).css("bottom" , "75px");
+                                            }); -->
+                                        <span class="tagnamecolor"><span class="tagcolor_jQuery">$</span><span class="tagcolor">(</span>"img"<span class="tagcolor">).<span class="tagcolor_jQuery">mouseenter</span>(<span class="attributevaluecolor">function</span>(){<br>
+                                            &emsp;&emsp;<span class="tagcolor_jQuery">$</span>(<span class="attributevaluecolor">this</span>).<span class="tagcolor_jQuery">css</span>(</span>"bottom" , "75px"<span class="tagcolor">);<br>
+                                                });</span></span>
+                                    </div>
+                                    <div class="third_command">
+                                        <!-- $("img").mouseenter(function(){
+                                                $(this).css("bottom" , "-75px");
+                                            }); -->
+                                        <span class="tagnamecolor"><span class="tagcolor_jQuery">$</span><span class="tagcolor">(</span>"img"<span class="tagcolor">).<span class="tagcolor_jQuery">mouseleave</span>(<span class="attributevaluecolor">function</span>(){<br>
+                                            &emsp;&emsp;<span class="tagcolor_jQuery">$</span>(<span class="attributevaluecolor">this</span>).<span class="tagcolor_jQuery">css</span>(</span>"bottom" , "-75px"<span class="tagcolor">);<br>
+                                                });</span></span>
+                                    </div>
+                                </div>
+                                <button class="reset_demo"><i class="fas fa-undo"></i></button>
+                            </div>
                         </div>
                     </div>
                     <!-- Les effets-->
@@ -443,10 +553,7 @@
                                     </p>
                                 </div>
                                 <div class="text_container">
-                                    <p>Avec jQuery, la gestion d'évènements est simplifiée grâce à une série de méthodes.<br>
-                                        Généralement, ces méthodes portent le nom de l'évènement auquel elles réagissent.<br>
-                                        Par exemple : click(), mouseenter(), mouseleave(), ...<br>
-                                        Similaire au addEventListener() en JavaScript Vanilla.
+                                    <p>La librairie jQuery
                                     </p>
                                 </div>
                             </div>

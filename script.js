@@ -160,9 +160,7 @@ const resetDemo = function() {
       },300);
 }
 
-$(resetButton).click(function(){
-      resetDemo();
-});
+$(resetButton).click(resetDemo);
 
       // INTRODUCTION DEMO
       const liste = $(".selecteur_container > ol");
@@ -231,40 +229,106 @@ $(resetButton).click(function(){
 
       // SELECTEUR DEMO END
 
-            // SELECTEUR DEMO
-            const  selecteurTextContainerP = $("#selecteur_text_container > p");
-            const  selecteurTextContainerTitle = $("#selecteur_text_container > h4");
-      
-            const domFirstCommand = $(".first_command");
-            const domSecondCommand = $(".second_command");
-            const domThirdCommand = $(".third_command");
-            const domFourthCommand = $(".fourth_command");
-      
-            // Commande 1
-            $(domFirstCommand).click(function(){
-                  $(selecteurTextContainerP).not(":last").css("border" , "1px solid black")
-                  $(this).css("border" , "1px solid #2e64b3").css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
+      // DOM DEMO
+      const  domTextContainerP = $(".selecteur_text_container > p");
+      const  domTextContainerTitle = $(".selecteur_text_container > h4");
+
+      const domFirstCommand = $(".first_command");
+      const domSecondCommand = $(".second_command");
+      const domThirdCommand = $(".third_command");
+      const domFourthCommand = $(".fourth_command");
+
+      // Commande 1
+      $(domFirstCommand).click(function(){
+            $(domTextContainerP).slice(0,2).css("border" , "1px solid black")
+            $(this).css("border" , "1px solid #2e64b3").css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
+      });
+
+      // Commande 2
+      $(domSecondCommand).click(function(){
+            $(domTextContainerTitle).eq(0).css("color","red");
+            $(this).css("border" , "1px solid #2e64b3").css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
+      });
+
+      // Commande 3
+      $(domThirdCommand).click(function(){
+            $(domTextContainerP).slice(1,3).css("color","red");
+            $(this).css("border" , "1px solid #2e64b3").css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
+      });
+
+      // Commande 4
+      $(domFourthCommand).click(function(){
+            $(domTextContainerP).eq(1).css("color","red");
+            $(this).css("border" , "1px solid #2e64b3").css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
+      });
+
+      // DOM DEMO END
+
+      // AGIR SUR LE HTML DEMO
+      const  htmlTextContainerP = $(".selecteur_text_container > p");
+
+      const htmlFirstCommand = $("section.fonctionnement_section> div > div:nth-child(4) > div > div.demo > div.commands > div.first_command");
+      const htmlSecondCommand = $(".second_command");
+      const htmlThirdCommand = $(".third_command");
+
+      // Commande 1
+      $(htmlFirstCommand).click(function(){
+            alert("Text : " + $(htmlTextContainerP).eq(0).text());
+            $(this).css("border" , "1px solid #2e64b3").css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
+      });
+
+      // Commande 2
+      $(htmlSecondCommand).click(function(){
+            $(htmlTextContainerP).eq(4).append("  Texte ajouté");
+            $(this).css("border" , "1px solid #2e64b3").css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
+      });
+
+      // Commande 3
+      $(htmlThirdCommand).click(function(){
+            $(htmlTextContainerP).eq(3).remove();
+            $(this).css("border" , "1px solid #2e64b3").css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
+      });
+
+      // AGIR SUR LE HTML DEMO END
+
+      // EVENTS DEMO
+      const  eventsTextContainerImg = $(".selecteur_text_container > img");
+
+      const eventsFirstCommand = $(".first_command");
+      const eventsSecondCommand = $(".second_command");
+      const eventsThirdCommand = $(".third_command");
+
+      // Commande 1
+      $(eventsFirstCommand).click(function(){
+            $(eventsTextContainerImg).animate({
+                  width: "-=75px"
             });
+            $(this).css("border" , "1px solid #2e64b3").css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
+      });
+
+      // Commande 2
+      $(eventsSecondCommand).mouseenter(function(){
+            $(eventsTextContainerImg).css("bottom" , "75px");
+            $(this).css("border" , "1px solid #2e64b3").css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
+      });
+
+      $(eventsSecondCommand).mouseleave(function(){
+            $(this).removeAttr("style");
+      });
+
+      // Commande 3
+      $(eventsThirdCommand).mouseleave(function(){
+            $(eventsTextContainerImg).css("bottom" , "-75px");
+            $(this).removeAttr("style");
+      });
+
+      $(eventsThirdCommand).mouseenter(function(){
+            $(this).css("border" , "1px solid #2e64b3").css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
+      });
+
+      // EVENTS DEMO END
+
       
-            // Commande 2
-            $(domSecondCommand).click(function(){
-                  $(selecteurTextContainerTitle).css("color","red");
-                  $(this).css("border" , "1px solid #2e64b3").css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
-            });
-      
-            // Commande 3
-            $(domThirdCommand).click(function(){
-                  $(selecteurTextContainerP).not(":first").css("color","red");
-                  $(this).css("border" , "1px solid #2e64b3").css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
-            });
-      
-            // Commande 4
-            $(domFourthCommand).click(function(){
-                  $(selecteurTextContainerP).eq(1).css("color","red");
-                  $(this).css("border" , "1px solid #2e64b3").css("filter", "drop-shadow(0px 0px 8px rgb(46 100 179 / 80%)");
-            });
-      
-            // SELECTEUR DEMO END
 
 // DEMO END
 
@@ -289,17 +353,17 @@ $(textComposer).click(function(){
       else if($(arrow).css("left") == "25px"){
             $(".alias_0, .alias_1, .alias_text").removeAttr("style");
             $(".alias_text").children().removeAttr("style");
-            $(arrow).css("left", "84px");
+            $(arrow).css("left", "98px");
             $(".selecteur_text").css("color", "red");
             $(".selecteur").fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
       }
-      else if($(arrow).css("left") == "84px"){
+      else if($(arrow).css("left") == "98px"){
             $(".selecteur, .selecteur_text").removeAttr("style");
-            $(arrow).css("left", "175px");
+            $(arrow).css("left", "210px");
             $(".action_text").css("color", "red");
             $(".action").fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200).fadeOut(200).fadeIn(200);
       }
-      else if($(arrow).css("left") == "175px"){
+      else if($(arrow).css("left") == "210px"){
             resetArrow();
       }
 });   

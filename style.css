@@ -376,14 +376,19 @@ section h2:after {
         flex-wrap: wrap;
         flex-direction: row;
         align-items: center;
+        justify-content: space-evenly;
     }
 
     .mini_content_container > div{
         margin: 5px;
+        max-width: 600px;
+        display: flex;
+        justify-content: center;
     }
 
     .text_container, .big_text_container{
         flex: 1 1 200px;
+        text-align: center;
     }
 
     .mini_slide_container h3{
@@ -469,8 +474,6 @@ section h2:after {
     margin: 5px 10px;
 }
 
-
-
 .selecteur_container, .demo.commands{
     min-width: 200px;
 }
@@ -483,8 +486,16 @@ section h2:after {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 10px;
+    overflow: hidden;
+}
+
+.selecteur_text_container img{
+    width: 300px;
+    position: relative;
+    transition: all 1.5s ease;
+    bottom: 0;
 }
 
 .commands{
@@ -519,7 +530,7 @@ button.reset_demo i{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 45%;
+    height: -webkit-fill-available;
     width: -webkit-fill-available;
     cursor: pointer;
     padding: 5px;
@@ -529,7 +540,7 @@ button.reset_demo i{
     transition: all 0.3s ease;
 
 }
-.first_command, .second_command:not(:last-child), .third_command, .fourth_command:not(:last-child){
+.first_command, .second_command:not(:last-child), .third_command:not(:last-child), .fourth_command:not(:last-child){
     margin-bottom: 5px;
 }
 
