@@ -462,6 +462,13 @@ section h2:after {
     }
     /* FONCTIONNEMENT SECTION END */
 
+    /* SOURCES SECTION */
+
+    #sources_logo_container{
+        display: flex;
+        justify-content: center;
+        margin: 75px 0px;
+    }
 
 /* SECTION END */
 
@@ -594,17 +601,6 @@ button.reset_demo i{
 }
 
 /* DEMOS END */
-
-
-/* LIVE CODING */
-
-#live_coding_container{
-    height: 90%;
-    margin: 50px 50px 0px 50px;
-    border: 1px solid #a9a9a9;
-}
-
-/* LIVE CODING END */
 
 
 
